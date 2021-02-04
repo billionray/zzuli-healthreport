@@ -1,6 +1,6 @@
-<h1 align="center">Auto-ZZULI-nCovDaka</h1>
+<h1 align="center">🎉郑州轻工业nCov肺炎健康打卡定时自动脚本🎉</h1>
 <hr>
-<p align="center">🍺郑州轻工业nCov肺炎健康打卡定时自动脚本🍺</p>
+<p align="center">🍺ZZULI-COVID-healthreport🍺</p>
 <div class="shields" align="center"><img src="https://img.shields.io/badge/Python-3.7-brightgreen" alt="">
 <img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt="">
 </div>
