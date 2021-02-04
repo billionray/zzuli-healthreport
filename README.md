@@ -13,7 +13,7 @@
 <h3>方法三：使用集成服务部署</h3>
 <h2>贡献者</h2>
 <a target="_blank" href="https://github.com/billionray">billionray</a><br />
-<a target="_blank" href="https://github.com/GeekXwb">GeekXwb</a>
+<a target="_blank" href="https://github.com/GeekXwb">GeekXwb</a><br />
 均为郑州轻工业大学2020级大一学生  
 均为非计算机及软件专业学生
 <h2>软件开发计划：</h2>
