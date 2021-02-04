@@ -12,26 +12,8 @@
 <h3>方法二：搭建python环境部署</h3>
 <h3>方法三：使用集成服务部署</h3>
 <h2>贡献者</h2>
-<ul style="list-style-type: none" class="list-style-none ">
-      <li class="mb-2 d-flex">
-        <a class="mr-2" data-hovercard-type="user" data-hovercard-url="/users/billionray/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/billionray">
-          <img style="border-radius:50%;" class="d-block avatar-user" src="https://avatars.githubusercontent.com/u/12987201?s=64&amp;v=4" width="32" height="32" alt="@billionray">
-</a>          <span class="flex-self-center flex-auto min-width-0 css-truncate css-truncate-target width-fit">
-            <a class="link-gray-dark no-underline flex-self-center" href="/billionray">
-              <strong>billionray</strong>
-
-</a>          </span>
-      </li>
-      <li class="mb-2 d-flex">
-        <a class="mr-2" data-hovercard-type="user" data-hovercard-url="/users/GeekXwb/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/GeekXwb">
-          <img style="border-radius:50%;" class="d-block avatar-user" src="https://avatars.githubusercontent.com/u/16056822?s=64&amp;v=4" width="32" height="32" alt="@GeekXwb">
-</a>          <span class="flex-self-center flex-auto min-width-0 css-truncate css-truncate-target width-fit">
-            <a class="link-gray-dark no-underline flex-self-center" href="/GeekXwb">
-              <strong>GeekXwb</strong>
-              <span class="text-gray">徐文博</span>
-</a>          </span>
-      </li>
-  </ul>
+<a target="_blank" href="https://github.com/billionray">billionray</a><br />
+<a target="_blank" href="https://github.com/GeekXwb">GeekXwb</a>
 均为郑州轻工业大学2020级大一学生  
 均为非计算机及软件专业学生
 <h2>软件开发计划：</h2>
