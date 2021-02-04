@@ -1,3 +1,4 @@
+<img src="./images/title.png">
 <h1 align="center">🎉郑州轻工业nCov肺炎健康打卡定时自动脚本🎉</h1>
 <hr>
 <p align="center">🍺ZZULI-COVID-healthreport🍺</p>
