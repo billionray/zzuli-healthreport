@@ -100,3 +100,67 @@ time.sleep(0.5)
 cookies = {}
 for cookie in selenium_cookies:
     cookies[cookie['name']] = cookie['value']
+
+#替换cookie中可能出现的%3D为等号
+xsrftoken=cookies.get("XSRF-TOKEN", )
+xxsrftoken=xsrftoken.replace('%3D','=')
+#print(ss)
+headers = {
+    "Connection": "keep-alive",
+    "X-XSRF-TOKEN": xxsrftoken,
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36",
+    "Content-Type":"application/json;charset=UTF-8",
+    "Origin":"https://msg.zzuli.edu.cn",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Referer": ("%s" % dakaurl),
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "zh-CN,zh;q=0.9",
+    "Cookie": "PHPSESSID="+cookies["PHPSESSID"]+ ";XSRF-TOKEN=" + cookies["XSRF-TOKEN"] +";"+"laravel_session="+cookies["laravel_session"]
+}
+#print(headers)
+#"Cookie": "laravel_session="+cookies["laravel_session"]+ ","+ "PHPSESSID="+cookies["PHPSESSID"]+ ","+ "XSRF-TOKEN=" + cookies["XSRF-TOKEN"]
+# headers未完成
+# 其中，headers中的“X-XSRF-TOKEN”需要从Cookies提取，对应着cookies中的“XSRF-TOKEN”
+
+#####以下代码为post部分，未完成，完成部分可能有错误
+# 转换data字典类型为字符串类型并支持中文
+datajson = json.dumps(data, ensure_ascii=False)
+#print(datajson)
+
+#邮箱配置
+my_sender = 发件人邮箱  # 发件人邮箱账号，为了后面易于维护，所以写成了变量
+my_user = 收件人邮箱  # 收件人邮箱账号，为了后面易于维护，所以写成了变量
+#定义邮件函数
+def mail():
+    ret = True
+    try:
+        msg = MIMEText(姓名+'恭喜您，打卡成功！', 'plain', 'utf-8')
+        msg['From'] = formataddr(["打卡提醒", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['To'] = formataddr(["您好，订阅者", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['Subject'] = "打卡提醒"  # 主题
+
+        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 使用SSL发送
+        server.login(my_sender, 发件人密码)  # SMTP密码，这里是我的的密码
+        server.sendmail(my_sender, [my_user, ], msg.as_string())
+        server.quit()
+    except Exception:  # 如果try中的语句没有执行，则会执行下面的ret=False
+        ret = False
+    return ret
+
+r=requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
+r.status_code
+if r.status_code ==200:
+    print("---------------DAKA Success---------------")
+    ret = mail()
+    if ret:
+        print("mail ok")
+    else:
+        print("mail failed")
+
+else:
+    print("Mission Failed,Check network or server now")
+#结束所有进程，以免内存占用过高
+driver.quit()
