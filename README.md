@@ -1,7 +1,7 @@
 <img src="./images/title.png">
 <h1 align="center">🎉郑州轻工业nCov肺炎健康打卡定时自动脚本🎉</h1>
 <hr>
-<p align="center">🍺ZZULI-COVID-healthreport🍺</p>
+<p align="center">🍺A script that can help you submit health information automatically🍺</p>
 <div class="shields" align="center"><img src="https://img.shields.io/badge/Python-3.7-brightgreen" alt="">
 <img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt="">
 </div>
@@ -15,7 +15,7 @@
 <h2>贡献者</h2>
 <a target="_blank" href="https://github.com/billionray">billionray</a><br />
 <a target="_blank" href="https://github.com/GeekXwb">GeekXwb</a><br />
-均为郑州轻工业大学2020级大一学生  
+均为郑州轻工业大学2020级大一学生<br />
 均为非计算机及软件专业学生
 <h2>软件开发计划：</h2>
 <h2>鸣谢：</h2>
