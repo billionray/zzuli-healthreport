@@ -3,9 +3,9 @@
 <hr>
 <p align="center">🍺A script that can help you submit health information automatically🍺</p>
 <div class="shields" align="center"><img src="https://img.shields.io/badge/Python-3.7-brightgreen" alt="">
-<img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt="">
+<a href="https://daka.xwwwb.com"><img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt=""></a>
 </div>
-<div align="center"><a href="#">主页</a></div>
+<div align="center"><a href="https://daka.xwwwb.com">主页</a></div>
 <p>👏欢迎使用郑州轻工业大学肺炎自动打卡脚本</p>
 <p>🎨此脚本可由Linux任务计划定时执行</p>
 <h2>部署</h2>
