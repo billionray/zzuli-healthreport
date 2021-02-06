@@ -19,7 +19,7 @@
 均为非计算机及软件专业学生
 <h2>软件开发计划：</h2>
 <h2>鸣谢：</h2>
-<a href="https://www.python.org/"><img src="./images/python.png" alt="" height="80px"></a><br />
+<a href="https://www.python.org/"><img src="./images/python.png" alt="" height="74px"></a><br />
 <a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="./images/vs.png" alt="" height="80px"></a>
 <a href="https://www.jetbrains.com/zh-cn/pycharm/"><img src="./images/icon-pycharm.png" alt="" height="80px"></a><br />
 
