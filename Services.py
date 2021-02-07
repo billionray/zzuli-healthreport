@@ -89,7 +89,11 @@ for link in driver.find_elements_by_xpath("//*[@data-href]"):  # 获取data-href
         print(link.get_attribute('data-href'))
     ###处理每日打卡链接
     dakaurl = link.get_attribute('data-href')
-
+    
+    getuserurl=dakaurl###截取code
+    getuserurl=getuserurl.replace('view?from=h5&','get_user_info?')+"&wj_type=0"
+    print(getuserurl)
+    
     dakaurl = dakaurl + "&date=" + datetime
     ###结束
     driver.get(link.get_attribute('data-href') + "&date=" + datetime)  # 切换到每日打卡页面
@@ -107,6 +111,21 @@ xsrftoken=cookies.get("XSRF-TOKEN", )
 xxsrftoken=xsrftoken.replace('%3D','=')
 if debug_mode == 1:
     print(xxsrftoken)
+get_headers={
+      "Connection": "keep-alive",
+      "Accept": "application/json, text/plain, */*",
+      "DNT": "1",
+      "X-XSRF-TOKEN": xxsrftoken,
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": ("%s" % dakaurl),
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "zh-CN,zh;q=0.9",
+      "Cookie": "PHPSESSID="+cookies["PHPSESSID"]+ ";XSRF-TOKEN=" + cookies["XSRF-TOKEN"] +";"+"laravel_session="+cookies["laravel_session"]
+    }
+
 headers = {
     "Connection": "keep-alive",
     "X-XSRF-TOKEN": xxsrftoken,
