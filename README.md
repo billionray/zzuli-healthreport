@@ -2,8 +2,9 @@
 <h1 align="center">🎉郑州轻工业nCov肺炎健康打卡定时自动脚本🎉</h1>
 <hr>
 <p align="center">🍺A script that can help you submit health information automatically🍺</p>
-<div class="shields" align="center"><img src="https://img.shields.io/badge/Python-3.7-brightgreen" alt="">
-<div class="shields" align="center"><img src="https://img.shields.io/badge/Chrome-v88-green" alt="">
+<div class="shields" align="center">
+<img src="https://img.shields.io/badge/Python-3.7-brightgreen" alt="">
+<img src="https://img.shields.io/badge/Chrome-v88-green" alt="">
 <a target="_blank" href="https://daka.xwwwb.com"><img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt=""></a>
 </div>
 <div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a></div>
