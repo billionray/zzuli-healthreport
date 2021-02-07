@@ -31,6 +31,7 @@ GPS地址=""
 收件人邮箱=""
 发件人邮箱=""
 发件人密码=""
+发件服务器SMTP地址=""
 ##############以下勿动################
 print(姓名)
 data = {
@@ -105,7 +106,7 @@ for cookie in selenium_cookies:
 xsrftoken=cookies.get("XSRF-TOKEN", )
 xxsrftoken=xsrftoken.replace('%3D','=')
 if debug_mode == 1:
-    print(ss)
+    print(xxsrftoken)
 headers = {
     "Connection": "keep-alive",
     "X-XSRF-TOKEN": xxsrftoken,
@@ -136,15 +137,15 @@ datajson = json.dumps(data, ensure_ascii=False)
 my_sender = 发件人邮箱  # 发件人邮箱账号，为了后面易于维护，所以写成了变量
 my_user = 收件人邮箱  # 收件人邮箱账号，为了后面易于维护，所以写成了变量
 #定义邮件函数
-def mail():
+def mail(yesorno):
     ret = True
     try:
-        msg = MIMEText(姓名+'恭喜您，打卡成功！', 'plain', 'utf-8')
+        msg = MIMEText(姓名+':'+'打卡'+ yesorno +'！', 'plain', 'utf-8')
         msg['From'] = formataddr(["打卡提醒", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To'] = formataddr(["您好，订阅者", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
-        msg['Subject'] = "打卡提醒"  # 主题
+        msg['Subject'] = "打卡"+yesorno  # 主题
 
-        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 使用SSL发送
+        server = smtplib.SMTP_SSL(发件服务器SMTP地址, 465)  # 使用SSL发送
         server.login(my_sender, 发件人密码)  # SMTP密码，这里是我的的密码
         server.sendmail(my_sender, [my_user, ], msg.as_string())
         server.quit()
@@ -156,7 +157,7 @@ r=requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cooki
 r.status_code
 if r.status_code ==200:
     print("---------------DAKA Success---------------")
-    ret = mail()
+    ret = mail("成功")
     if ret:
         print("mail ok")
     else:
@@ -164,5 +165,10 @@ if r.status_code ==200:
 
 else:
     print("Mission Failed,Check network or server now")
+    ret = mail("失败")
+    if ret:
+        print("mail ok")
+    else:
+        print("mail failed")
 #结束所有进程，以免内存占用过高
 driver.quit()
