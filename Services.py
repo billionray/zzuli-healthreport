@@ -1,6 +1,5 @@
 from selenium import webdriver
 import time
-import re
 import json
 import requests
 import smtplib  # 加载邮箱模块
