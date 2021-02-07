@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.utils import formataddr
 datetime = time.strftime("%Y-%m-%d", time.localtime())  # 获取日期 YY-MM-DD
 debug_mode=0 #调试模式
-##############以上勿动################
+##############信息填写################
 日期=datetime
 用户名 = ""
 密码 = ""
@@ -32,26 +32,8 @@ GPS地址=""
 发件人邮箱=""
 发件人密码=""
 发件服务器SMTP地址=""
-##############以下勿动################
+##############登录模块开始################
 print(姓名)
-data = {
-    "user_code": 用户名, "user_name": 姓名, "id_card": 身份证号, "date": 日期, "sex": 性别,
-    "age": 年龄, "org": 学院, "year": 年级, "spec": 专业, "class": 班级, "region": "", "area": "",
-    "build": "", "dorm": "", "mobile": 电话, "jt_mobile": 家庭电话, "province": 省, "city": 市,
-    "district": 区县, "address": 地址, "hjdz": "", "hj_province": "", "hj_city": "", "hj_district": "",
-    "out": "否",
-    "out_address": "[{\"start_date\":\"\",\"end_date\":\"\",\"province\":\"\",\"city\":\"\",\"district\":\"\",\"area\":\"\",\"address\":\"\"}]",
-    "hb": "否", "hb_area": "", "hn": "否", "hn_area": "", "lat": 经度, "lon": 纬度, "gcj_lat": 经度,
-    "gcj_lon": 纬度, "jz_address": GPS地址, "jz_province": 省, "jz_city": 市,
-    "jz_district": 区县, "jz_sfyz": "是", "sj_province": "", "sj_city": "", "sj_district": "", "temp": "正常",
-    "jrzz": "无", "jzqk": "", "stzk": "无症状", "jcbl": "否", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
-    "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "", "hb_date": "", "jz_qzbl": "", "tz_qzbl": "",
-    "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "", "jc_jcrq": "",
-    "jc_province": "", "jc_city": "", "jc_district": "", "jc_area": "", "jc_address": "", "qz_yqbl": "否", "qz_yqrq": "",
-    "zl_province": "", "zl_city": "", "zl_district": "", "zl_area": "", "zl_address": "", "zl_sfzy": "", "zl_zyrq": "",
-    "xq_province": "", "xq_city": "", "xq_district": "", "xq_area": "", "xq_address": "", "home_time": "", "wj_type": 0
-}
-
 loginurl = "http://kys.zzuli.edu.cn/cas/login?"
 肺炎打卡 = "https://msg.zzuli.edu.cn/xsc/view?from=h5"
 
@@ -81,7 +63,7 @@ time.sleep(0.5)
 # botton= 'document.getElementsByClassName("mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3")[0].click();'
 # driver.execute_script(botton) #切换到肺炎打卡选项卡方案二
 
-
+##############链接获取开始################
 driver.get(肺炎打卡)  # 切换到肺炎打卡选项卡 方案三 以获取id
 
 for link in driver.find_elements_by_xpath("//*[@data-href]"):  # 获取data-href元素
@@ -89,10 +71,11 @@ for link in driver.find_elements_by_xpath("//*[@data-href]"):  # 获取data-href
         print(link.get_attribute('data-href'))
     ###处理每日打卡链接
     dakaurl = link.get_attribute('data-href')
-    
-    getuserurl=dakaurl###截取code
-    getuserurl=getuserurl.replace('view?from=h5&','get_user_info?')+"&wj_type=0"
-    print(getuserurl)
+
+    getuserurl = dakaurl  ###截取code
+    getuserurl = getuserurl.replace('view?from=h5&', 'get_user_info?') + "&wj_type=0"
+    if debug_mode == 1:
+        print(getuserurl)
     
     dakaurl = dakaurl + "&date=" + datetime
     ###结束
@@ -101,7 +84,8 @@ for link in driver.find_elements_by_xpath("//*[@data-href]"):  # 获取data-href
         print(dakaurl)
     selenium_cookies = driver.get_cookies()
 time.sleep(0.5)
-# cookie处理
+##############链接获取结束################
+##############cookie处理及header处理开始################
 cookies = {}
 for cookie in selenium_cookies:
     cookies[cookie['name']] = cookie['value']
@@ -146,13 +130,39 @@ if debug_mode == 1:
 #"Cookie": "laravel_session="+cookies["laravel_session"]+ ","+ "PHPSESSID="+cookies["PHPSESSID"]+ ","+ "XSRF-TOKEN=" + cookies["XSRF-TOKEN"]
 # headers未完成
 # 其中，headers中的“X-XSRF-TOKEN”需要从Cookies提取，对应着cookies中的“XSRF-TOKEN”
+#data
+##############cookie处理及header处理结束################
+##############data字典处理开始################
+sourcedata = requests.get(getuserurl)
+sourcedata.encoding = 'utf-8' #这一行是将编码转为utf-8否则中文会显示乱码。
+yuandata=sourcedata.text
+if debug_mode == 1:
+    print(yuandata)
+
+data = {
+    "user_code": 用户名, "user_name": 姓名, "id_card": 身份证号, "date": 日期, "sex": 性别,
+    "age": 年龄, "org": 学院, "year": 年级, "spec": 专业, "class": 班级, "region": "", "area": "",
+    "build": "", "dorm": "", "mobile": 电话, "jt_mobile": 家庭电话, "province": 省, "city": 市,
+    "district": 区县, "address": 地址, "hjdz": "", "hj_province": "", "hj_city": "", "hj_district": "",
+    "out": "否",
+    "out_address": "[{\"start_date\":\"\",\"end_date\":\"\",\"province\":\"\",\"city\":\"\",\"district\":\"\",\"area\":\"\",\"address\":\"\"}]",
+    "hb": "否", "hb_area": "", "hn": "否", "hn_area": "", "lat": 经度, "lon": 纬度, "gcj_lat": 经度,
+    "gcj_lon": 纬度, "jz_address": GPS地址, "jz_province": 省, "jz_city": 市,
+    "jz_district": 区县, "jz_sfyz": "是", "sj_province": "", "sj_city": "", "sj_district": "", "temp": "正常",
+    "jrzz": "无", "jzqk": "", "stzk": "无症状", "jcbl": "否", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
+    "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "", "hb_date": "", "jz_qzbl": "", "tz_qzbl": "",
+    "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "", "jc_jcrq": "",
+    "jc_province": "", "jc_city": "", "jc_district": "", "jc_area": "", "jc_address": "", "qz_yqbl": "否", "qz_yqrq": "",
+    "zl_province": "", "zl_city": "", "zl_district": "", "zl_area": "", "zl_address": "", "zl_sfzy": "", "zl_zyrq": "",
+    "xq_province": "", "xq_city": "", "xq_district": "", "xq_area": "", "xq_address": "", "home_time": "", "wj_type": 0
+}
 
 #####以下代码为post部分，未完成，完成部分可能有错误
 # 转换data字典类型为字符串类型并支持中文
 datajson = json.dumps(data, ensure_ascii=False)
 #print(datajson)
-
-#邮箱配置
+##############data字典处理结束################
+##############邮箱配置开始################
 my_sender = 发件人邮箱  # 发件人邮箱账号，为了后面易于维护，所以写成了变量
 my_user = 收件人邮箱  # 收件人邮箱账号，为了后面易于维护，所以写成了变量
 #定义邮件函数
@@ -171,9 +181,10 @@ def mail(yesorno):
     except Exception:  # 如果try中的语句没有执行，则会执行下面的ret=False
         ret = False
     return ret
-
+##############邮箱配置结束################
+##############发送请求！！！################
 r=requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
-r.status_code
+##############检测结果并发送邮件################
 if r.status_code ==200:
     print("---------------DAKA Success---------------")
     ret = mail("成功")
