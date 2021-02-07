@@ -41,7 +41,7 @@ data = {
     "out": "否",
     "out_address": "[{\"start_date\":\"\",\"end_date\":\"\",\"province\":\"\",\"city\":\"\",\"district\":\"\",\"area\":\"\",\"address\":\"\"}]",
     "hb": "否", "hb_area": "", "hn": "否", "hn_area": "", "lat": 经度, "lon": 纬度, "gcj_lat": 经度,
-    纬度: 113.27854, "jz_address": GPS地址, "jz_province": 省, "jz_city": 市,
+    "gcj_lon": 纬度, "jz_address": GPS地址, "jz_province": 省, "jz_city": 市,
     "jz_district": 区县, "jz_sfyz": "是", "sj_province": "", "sj_city": "", "sj_district": "", "temp": "正常",
     "jrzz": "无", "jzqk": "", "stzk": "无症状", "jcbl": "否", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
     "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "", "hb_date": "", "jz_qzbl": "", "tz_qzbl": "",
@@ -92,7 +92,8 @@ for link in driver.find_elements_by_xpath("//*[@data-href]"):  # 获取data-href
     dakaurl = dakaurl + "&date=" + datetime
     ###结束
     driver.get(link.get_attribute('data-href') + "&date=" + datetime)  # 切换到每日打卡页面
-    #print(a)
+    if debug_mode == 1:
+        print(dakaurl)
     selenium_cookies = driver.get_cookies()
 time.sleep(0.5)
 # cookie处理
@@ -103,7 +104,8 @@ for cookie in selenium_cookies:
 #替换cookie中可能出现的%3D为等号
 xsrftoken=cookies.get("XSRF-TOKEN", )
 xxsrftoken=xsrftoken.replace('%3D','=')
-#print(ss)
+if debug_mode == 1:
+    print(ss)
 headers = {
     "Connection": "keep-alive",
     "X-XSRF-TOKEN": xxsrftoken,
@@ -119,7 +121,8 @@ headers = {
     "Accept-Language": "zh-CN,zh;q=0.9",
     "Cookie": "PHPSESSID="+cookies["PHPSESSID"]+ ";XSRF-TOKEN=" + cookies["XSRF-TOKEN"] +";"+"laravel_session="+cookies["laravel_session"]
 }
-#print(headers)
+if debug_mode == 1:
+    print(headers)
 #"Cookie": "laravel_session="+cookies["laravel_session"]+ ","+ "PHPSESSID="+cookies["PHPSESSID"]+ ","+ "XSRF-TOKEN=" + cookies["XSRF-TOKEN"]
 # headers未完成
 # 其中，headers中的“X-XSRF-TOKEN”需要从Cookies提取，对应着cookies中的“XSRF-TOKEN”
