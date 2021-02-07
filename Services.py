@@ -110,7 +110,7 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,my_user,my_s
     #data
     ##############cookie处理及header处理结束################
     ##############data字典处理开始################
-    sourcedata = requests.get(getuserurl)
+    sourcedata = requests.get(getuserurl,headers=get_headers,cookies=cookies)
     sourcedata.encoding = 'utf-8' #这一行是将编码转为utf-8否则中文会显示乱码。
     yuandata=sourcedata.text
     if debug_mode == 1:
