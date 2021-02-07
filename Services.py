@@ -161,7 +161,7 @@ my_user = 收件人邮箱  # 收件人邮箱账号，为了后面易于维护，
 def mail(yesorno):
     ret = True
     try:
-        msg = MIMEText(姓名+':'+'打卡'+ yesorno +'！', 'plain', 'utf-8')
+        msg = MIMEText(user_dict.get("user_code", ) + ':' + '打卡' + yesorno + '！', 'plain', 'utf-8')
         msg['From'] = formataddr(["打卡提醒", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To'] = formataddr(["您好，订阅者", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "打卡"+yesorno  # 主题
