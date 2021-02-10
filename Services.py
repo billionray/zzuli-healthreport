@@ -1,11 +1,10 @@
 from selenium import webdriver
-import time
-import json
-import requests
-import smtplib  # 加载邮箱模块
+import time,json,requests,smtplib
+# 加载邮箱模块
 from email.mime.text import MIMEText
 from email.utils import formataddr
 debug_mode=0 #调试模式
+mail=1
 ##############信息填写################
 #None
 ##############登录模块开始################
@@ -60,7 +59,8 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,my_user,my_s
         if debug_mode == 1:
             print(dakaurl)
         selenium_cookies = driver.get_cookies()
-    time.sleep(0.5)
+    time.sleep(0.1)
+
     ##############链接获取结束################
     ##############cookie处理及header处理开始################
     cookies = {}
