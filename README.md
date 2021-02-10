@@ -11,7 +11,7 @@
 <div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a></div>
 <h2>特征</h2>
 <p>👏欢迎使用郑州轻工业大学肺炎打卡脚本</p>
-<p>🎨此脚本可由Github actions、Linux crontab、Windows Timer定时执行</p>
+<p>🎨此脚本可由Github actions、Linux crontab、Windows 计划任务定时执行</p>
 <p>🍔...</p>
 
 <h2>重要声明</h2>
@@ -20,19 +20,23 @@
 请勿用于打卡，用于打卡的一切后果由使用者承担。若有身体不适等情况，请手动打卡提交真实数据并及时向辅导员及学校报告！
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
-<h3>本地部署</h3>
+<h3>本地简单部署</h3>
 
-1.安装 Python 3 并 add PATH
+1.安装 Python 3 并 add to PATH
 
 2.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)
 
 3.下载本仓库，并编辑 run.py 的个人信息
 
-4.`python yourpath/run.py`即可
+4.`python yourpath/run.py`即可运行一次
+
+配合[Linux crontab](https://github.com/billionray/ZZULI-healthreport "Linux crontab") 或 [Windows计划任务](https://github.com/billionray/ZZULI-healthreport "Windows计划任务")
+<h3>Docker</h3>
 <h3>Github actions</h3>
+
+[Github actions](https://github.com/billionray/ZZULI-healthreport-actions)
 <h3>Linux crontab</h3>
 <h3>Windows计划任务</h3>
-<h3>Docker</h3>
 <h2>贡献者</h2>
 
 | 用户名  | 简介 |
@@ -42,8 +46,9 @@
 
 <h2>更新记录：</h2>
 <ul>
+<li>2021-2-9 Github actions完成！</li>
 <li>2021-2-7 22:05 模块化完成！</li>
-<li>2021-2-7 从学校服务器端获取部分数据</li>
+<li>2021-2-7 从学校服务器端获取部分数据以减少信息填入</li>
 <li>2021-2-4 初次提交代码</li>
 </ul>
 <h2>鸣谢：</h2>
