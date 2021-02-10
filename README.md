@@ -20,6 +20,7 @@
 请勿用于打卡，用于打卡的一切后果由使用者承担。若有身体不适等情况，请手动打卡提交真实数据并及时向辅导员及学校报告！
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
+####
 <h3>本地简单部署</h3>
 
 1.安装 Python 3 并 add to PATH
@@ -38,7 +39,7 @@
 <h3>Linux crontab</h3>
 <h3>Windows计划任务</h3>
 <h2>贡献者</h2>
-
+####这部分要迁移到网站上
 | 用户名  | 简介 |
 | - | - |
 | [billionray](https://github.com/billionray) | 国教20级 |
