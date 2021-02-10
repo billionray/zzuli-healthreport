@@ -1,4 +1,4 @@
-<div align=center><img style="width: 60%;" src="./images/title.png"></div>
+<!-- div align=center><img style="width: 60%;" src="./images/title.png"></div>-->
 <h1 align="center">🎉郑州轻工业nCov肺炎健康打卡定时自动脚本🎉</h1>
 <hr />
 <p align="center">🍺A script that can help you submit health information automatically🍺</p>
