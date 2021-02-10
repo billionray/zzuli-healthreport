@@ -11,11 +11,13 @@
 <div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a></div>
 <h2>特征</h2>
 <p>👏欢迎使用郑州轻工业大学肺炎自动打卡脚本</p>
-<p>🎨此脚本可由Linux任务计划定时执行</p>
+<p>🎨此脚本可由Github actions、Linux crontab、Windows Timer定时执行</p>
 <p>🍔...</p>
 
 <h2>重要声明</h2>
-此项目仅供身体健康者使用，若有身体不适等情况，请手动打卡提交真实数据并及时向辅导员及学校报告！
+此项目仅供学習用，下载后请于24小时内删除。
+
+请勿用于真实打卡，用于真实打卡的一切后果由使用者承担。若有身体不适等情况，请手动打卡提交真实数据并及时向辅导员及学校报告！
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
 <h2>贡献者</h2>
