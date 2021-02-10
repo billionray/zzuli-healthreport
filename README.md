@@ -1,5 +1,5 @@
 <!-- div align=center><img style="width: 60%;" src="./images/title.png"></div>-->
-<h1 align="center">🎉郑州轻工业nCov肺炎健康打卡定时自动脚本🎉</h1>
+<h1 align="center">🎉郑州轻工业大学nCov肺炎健康打卡脚本🎉</h1>
 <hr />
 <p align="center">🍺A script that can help you submit health information automatically🍺</p>
 <div align="center">
@@ -10,23 +10,35 @@
 <br />
 <div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a></div>
 <h2>特征</h2>
-<p>👏欢迎使用郑州轻工业大学肺炎自动打卡脚本</p>
+<p>👏欢迎使用郑州轻工业大学肺炎打卡脚本</p>
 <p>🎨此脚本可由Github actions、Linux crontab、Windows Timer定时执行</p>
 <p>🍔...</p>
 
 <h2>重要声明</h2>
 此项目仅供学習用，下载后请于24小时内删除。
 
-请勿用于真实打卡，用于真实打卡的一切后果由使用者承担。若有身体不适等情况，请手动打卡提交真实数据并及时向辅导员及学校报告！
+请勿用于打卡，用于打卡的一切后果由使用者承担。若有身体不适等情况，请手动打卡提交真实数据并及时向辅导员及学校报告！
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
 <h3>本地部署</h3>
+
+1.安装 Python 3 并 add PATH
+
+2.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)
+
+3.下载本仓库，并编辑 run.py 的个人信息
+
+4.`python yourpath/run.py`即可
+<h3>Github actions</h3>
+<h3>Linux crontab</h3>
+<h3>Windows计划任务</h3>
+<h3>Docker</h3>
 <h2>贡献者</h2>
 
 | 用户名  | 简介 |
 | - | - |
-| [billionray](https://github.com/billionray) | 郑州轻工业大学国际教育学院20级 |
-| [GeekXwb](https://github.com/GeekXwb) | 郑州轻工业大学数学与信息科学学院20级  |
+| [billionray](https://github.com/billionray) | 国教20级 |
+| [GeekXwb](https://github.com/GeekXwb) | 数信20级  |
 
 <h2>更新记录：</h2>
 <ul>
@@ -35,8 +47,6 @@
 <li>2021-2-4 初次提交代码</li>
 </ul>
 <h2>鸣谢：</h2>
-<a href="https://www.python.org/"><img src="./images/python.png" alt="" height="74px"></a><br />
-<a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="./images/vs.png" alt="" height="80px"></a>
-<a href="https://www.jetbrains.com/zh-cn/pycharm/"><img src="./images/icon-pycharm.png" alt="" height="80px"></a><br />
-
-感谢`Python`提供高效的编程语言以及感谢`Visual Studio`及`PyCharm`提供方便的IDE供开发者完成开发！
+<a href="https://www.python.org/"><img src="./images/python.png" alt="" height="50px"></a><br />
+<a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="./images/vs.png" alt="" height="50px"></a>
+<a href="https://www.jetbrains.com/zh-cn/pycharm/"><img src="./images/icon-pycharm.png" alt="" height="50px"></a><br />
