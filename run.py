@@ -9,8 +9,9 @@ homemobile="" #家庭电话
 gpslocation="" #GPS地址，详细一点，例如：XX省XX市XX区XX街道XX小区
 lat=23.23333#小数点后五位 #经度
 lon=233.23333  #小数点后五位 #纬度
+#以下信息可以不用填写，不填写则无法使用邮箱提醒
 my_user="" #收件人
 my_sender="" #发件人
-SMTPdomain="" #SMTP地址
-SMTPauth="" #SMTP授权码
+SMTPdomain="" #发件人SMTP地址（SSL）
+SMTPauth="" #发件人SMTP授权码
 service(username,password,mobile,homemobile,gpslocation,lat,lon,my_user,my_sender,SMTPdomain,SMTPauth,datetime)
