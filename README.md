@@ -40,9 +40,9 @@
 <h3>Github Actions(推荐使用)</h3>
  <a target="_blank" href="https://daka.xwwwb.com/ga.md">点我查看教程</a><br />
  <a target="_blank" href="https://github.com/billionray/ZZULI-healthreport-actions">仓库地址</a>
-<h3>Docker一键部署</h3>
+<h3>使用Docker部署到Linux服务器</h3>
  <a target="_blank" href="https://daka.xwwwb.com/docker.md">点我查看教程</a>
-<h3>Linux 服务器部署</h3>
+<h3>使用Python原生环境部署到Linux服务器</h3>
  <a target="_blank" href="https://daka.xwwwb.com/Linux.md">点我查看教程</a>
 <h2>贡献者</h2>
 
