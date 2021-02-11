@@ -20,7 +20,7 @@
 请勿用于打卡，用于打卡的一切后果由使用者承担。若有身体不适等情况，请手动打卡提交真实数据并及时向辅导员及学校报告！
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
-####
+
 <h3>Windows本地部署</h3>
 <p>
 1.安装 Python 3 并 add to PATH
@@ -33,20 +33,17 @@
 
 4.`python yourpath/run.py`即可运行一次
 
-5. 添加任务到Windows任务计划，实现自动化打卡。
+5.添加任务到Windows任务计划，实现自动化打卡。
 
 ################
 </p>
 <h3>Github Actions(推荐使用)</h3>
-
-[点我查看教程](https://daka.xwwwb.com/ga.md)  
-[仓库地址](https://github.com/billionray/ZZULI-healthreport-actions)
+ <a target="_blank" href="https://daka.xwwwb.com/ga.md">点我查看教程</a><br />
+ <a target="_blank" href="https://github.com/billionray/ZZULI-healthreport-actions">仓库地址</a>
 <h3>Docker一键部署</h3>
-[点我查看教程](https://daka.xwwwb.com/docker.md)
-
+ <a target="_blank" href="https://daka.xwwwb.com/docker.md">点我查看教程</a>
 <h3>Linux 服务器部署</h3>
-[点我查看教程](https://daka.xwwwb.com/Linux.md)
-
+ <a target="_blank" href="https://daka.xwwwb.com/Linux.md">点我查看教程</a>
 <h2>贡献者</h2>
 
  [billionray](https://github.com/billionray) ：国教20级  
