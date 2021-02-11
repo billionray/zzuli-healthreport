@@ -21,29 +21,36 @@
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
 ####
-<h3>本地简单部署</h3>
-
+<h3>Windows本地部署</h3>
+<p>
 1.安装 Python 3 并 add to PATH
 
-2.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)
+2.下载本仓库，并编辑 run.py 的个人信息，具体要求详见run.py
 
-3.下载本仓库，并编辑 run.py 的个人信息
+3.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)
+
+`pip install -r requirements.txt`
 
 4.`python yourpath/run.py`即可运行一次
 
-配合[Linux crontab](https://github.com/billionray/ZZULI-healthreport "Linux crontab") 或 [Windows计划任务](https://github.com/billionray/ZZULI-healthreport "Windows计划任务")
-<h3>Docker</h3>
-<h3>Github actions</h3>
+5. 添加任务到Windows任务计划，实现自动化打卡。
 
-[Github actions](https://github.com/billionray/ZZULI-healthreport-actions)
-<h3>Linux crontab</h3>
-<h3>Windows计划任务</h3>
-####这部分要迁移到网站上
+################
+</p>
+<h3>Github Actions(推荐使用)</h3>
+
+[点我查看教程](https://daka.xwwwb.com/ga.md)  
+[仓库地址](https://github.com/billionray/ZZULI-healthreport-actions)
+<h3>Docker一键部署</h3>
+[点我查看教程](https://daka.xwwwb.com/docker.md)
+
+<h3>Linux 服务器部署</h3>
+[点我查看教程](https://daka.xwwwb.com/Linux.md)
+
 <h2>贡献者</h2>
-| 用户名  | 简介 |
-| - | - |
-| [billionray](https://github.com/billionray) | 国教20级 |
-| [GeekXwb](https://github.com/GeekXwb) | 数信20级  |
+
+ [billionray](https://github.com/billionray) ：国教20级  
+ [GeekXwb](https://github.com/GeekXwb) ：数信20级
 
 <h2>更新记录：</h2>
 <ul>
