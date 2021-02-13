@@ -47,7 +47,7 @@
 <h2>贡献者</h2>
 
  [billionray](https://github.com/billionray) ：国教20级  
- [GeekXwb](https://github.com/GeekXwb) ：数信20级
+ [xwwwb](https://github.com/xwwwb) ：数信20级
 
 <h2>更新记录：</h2>
 <ul>
