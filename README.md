@@ -29,21 +29,23 @@
 
 3.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)
 
-`pip install -r requirements.txt`
+`pip3 install selenium requests`
 
-4.`python yourpath/run.py`即可运行一次
+4.`python3 yourpath/run.py`即可运行一次
 
 5.添加任务到Windows任务计划，实现自动化打卡。
 
-################
+......
+
+详细步骤，请移步文档网站： <a target="_blank" href="https://daka.xwwwb.com/#/local">点我进入</a>
 </p>
 <h3>Github Actions(推荐使用)</h3>
- <a target="_blank" href="https://daka.xwwwb.com/ga.md">点我查看教程</a><br />
+ <a target="_blank" href="https://daka.xwwwb.com/#/ga">点我查看教程</a><br />
  <a target="_blank" href="https://github.com/billionray/ZZULI-healthreport-actions">仓库地址</a>
 <h3>使用Docker部署到Linux服务器</h3>
- <a target="_blank" href="https://daka.xwwwb.com/docker.md">点我查看教程</a>
+ <a target="_blank" href="https://daka.xwwwb.com/#/docker">点我查看教程</a>
 <h3>使用Python原生环境部署到Linux服务器</h3>
- <a target="_blank" href="https://daka.xwwwb.com/Linux.md">点我查看教程</a>
+ <a target="_blank" href="https://daka.xwwwb.com/#/linux">点我查看教程</a>
 <h2>贡献者</h2>
 
  [billionray](https://github.com/billionray) ：国教20级  
