@@ -178,14 +178,26 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,my_user,my_s
             return 'daka ok mail faild'
 
     else:
-        print("Mission Failed,Check network or server now")
-        ret = mail("失败")
-        if ret:
-            print("mail ok")
-            return'daka faild mail faild'
+        print("Retry!")
+        retry = requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
+        if retry.status_code == 200:
+            print("---------------DAKA Success---------------")
+            ret = mail("成功")
+            if ret:
+                print("mail ok")
+                return 'daka ok mail ok '
+            else:
+                print("mail failed")
+                return 'daka ok mail faild'
         else:
-            print("mail failed")
-            return'daka faild mail faild'
+            print("Mission Failed,Check network or server now")
+            ret = mail("失败")
+            if ret:
+                print("mail ok")
+                return'daka faild mail faild'
+            else:
+                print("mail failed")
+                return'daka faild mail faild'
     #结束所有进程，以免内存占用过高
 
 if __name__=='__main__':
