@@ -7,6 +7,7 @@ password= "" #密码
 mobile="" #电话
 homemobile="" #家庭电话
 gpslocation="" #GPS地址，详细一点，例如：XX省XX市XX区XX街道XX小区
+# 经纬度查询： https://lbs.amap.com/console/show/picker
 lat=23.23333#小数点后五位 #经度
 lon=233.23333  #小数点后五位 #纬度
 #以下信息可以不用填写，不填写则无法使用邮箱提醒
