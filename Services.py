@@ -1,14 +1,20 @@
-from selenium import webdriver
-import time,json,requests,smtplib
+import json
+import requests
+import smtplib
+import time
 # 加载邮箱模块
 from email.mime.text import MIMEText
 from email.utils import formataddr
+
+from selenium import webdriver
+
 debug_mode=0 #调试模式
 mail=1
 ##############信息填写################
 #None
 ##############登录模块开始################
 def service(username,password,mobile,homemobile,gpslocation,lat,lon,my_user,my_sender,SMTPdomain,SMTPauth,datetime):
+
     print(username)
     loginurl = "http://kys.zzuli.edu.cn/cas/login?"
     肺炎打卡 = "https://msg.zzuli.edu.cn/xsc/view?from=h5"
@@ -52,7 +58,7 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,my_user,my_s
         getuserurl = getuserurl.replace('view?from=h5&', 'get_user_info?') + "&wj_type=0"
         if debug_mode == 1:
             print(getuserurl)
-    
+
         dakaurl = dakaurl + "&date=" + datetime
         ###结束
         driver.get(link.get_attribute('data-href') + "&date=" + datetime)  # 切换到每日打卡页面
