@@ -21,7 +21,7 @@
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
 
-<h3>Windows本地部署</h3>
+<h3>本地部署</h3>
 <p>
 1.安装 Python 3 并 add to PATH
 
@@ -33,7 +33,7 @@
 
 4.`python3 yourpath/run.py`即可运行一次
 
-5.添加任务到Windows任务计划，实现自动化打卡。
+5.添加任务到Windows任务计划/Linux crontab，实现自动化打卡。
 
 ......
 
