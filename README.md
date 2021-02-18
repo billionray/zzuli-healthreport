@@ -27,9 +27,8 @@
 
 2.下载本仓库，并编辑 run.py 的个人信息，具体要求详见run.py
 
-3.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)
+3.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)安装webdriver
 
-`pip3 install selenium requests`
 
 4.`python3 yourpath/run.py`即可运行一次
 
