@@ -4,7 +4,9 @@ from main import service
 from notification import mail
 datetime = time.strftime("%Y-%m-%d", time.localtime())
 datetime=datetime #日期 如果需要更改请遵循这个格式："YY-MM-DD" 
-mail=1
+mail_flag=0
+try:
+    mail_flag = os.environ['MAILFLAG']
 # 经纬度查询： https://lbs.amap.com/console/show/picker
 try:
     username = os.environ['USERNAME'] 
