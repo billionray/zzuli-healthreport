@@ -16,7 +16,6 @@ try:
     gpslocation=os.environ['GPS'] 
     lat=float(os.environ['LAT'])
     lon=float(os.environ['LON']) 
-
 except:
     username = "" #用户名
     password= "" #密码
