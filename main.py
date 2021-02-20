@@ -2,9 +2,12 @@ import json
 import requests
 import time
 from selenium import webdriver
+from retrying import retry
+#from  run import number_of_retries
 ##############信息填写################
 #None
 ##############登录模块开始################
+@retry(stop_max_attempt_number=3)
 def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime):
 
     print(username)

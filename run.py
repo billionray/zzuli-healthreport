@@ -4,7 +4,6 @@ from main import service
 from notification import mail
 datetime = time.strftime("%Y-%m-%d", time.localtime())
 datetime=datetime #日期 如果需要更改请遵循这个格式："YY-MM-DD" 
-number_of_retries=3 #重试次数
 mail=1
 # 经纬度查询： https://lbs.amap.com/console/show/picker
 try:
@@ -36,12 +35,16 @@ except:
     my_sender="" #发件人
     SMTPdomain="" #发件人SMTP地址（SSL）
     SMTPauth="" #发件人SMTP授权码
+transferrun=username,password,mobile,homemobile,gpslocation,lat,lon,datetime
 
-run=service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime)
+run=service(transferrun)
+
 if run==1:
    reportstatus=1 #这里是为了以后方便加入retry和其它通知方式
+   print("success")
 else:
    reportstatus=0
+   print("faild")
 if mail==1:
     if reportstatus==1:
         mail("成功",my_user,my_sender,SMTPdomain,SMTPauth,datetime)
