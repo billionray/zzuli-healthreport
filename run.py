@@ -36,9 +36,7 @@ except:
     my_sender="" #发件人
     SMTPdomain="" #发件人SMTP地址（SSL）
     SMTPauth="" #发件人SMTP授权码
-transferrun=username,password,mobile,homemobile,gpslocation,lat,lon,datetime
-
-run=service(transferrun)
+run=service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime)
 
 if run==1:
    reportstatus=1 #这里是为了以后方便加入retry和其它通知方式
