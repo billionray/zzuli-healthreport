@@ -8,7 +8,21 @@ from retrying import retry
 #None
 ##############登录模块开始################
 @retry(stop_max_attempt_number=3)
+# def getlonlat(gpslocation):
+#     lonlaturl = 'https://restapi.amap.com/v3/geocode/geo?address='+gpslocation+'&key=6840459b6a540ca99eac8ef325840db3'
+#     amap = requests.get(lonlaturl)
+#     amap.encoding = 'utf-8'  # 这一行是将编码转为utf-8否则中文会显示乱码。
+#     data = amap.text
+#     lonlatdata = json.loads(data)
+#     lonlat = lonlatdata['geocodes'][0]['location']
+#     lon = lonlat.split(",")[0]
+#     lat = lonlat.split(",")[1]
+#     return lon , lat
 def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime):
+
+    # lon = getlonlat(gpslocation)[0]
+    # lat = getlonlat(gpslocation)[1]
+    # print(lon + " " + lat)
 
     print(username)
     loginurl = "http://kys.zzuli.edu.cn/cas/login?"
