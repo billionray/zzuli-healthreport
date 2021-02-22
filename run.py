@@ -24,7 +24,8 @@ except:
     mobile="" #电话
     homemobile="" #家庭电话
     gpslocation="" #GPS地址，详细一点，例如：XX省XX市XX区XX街道XX小区(可选)
-    # 经纬度查询： https://lbs.amap.com/console/show/picker
+    # 经纬度查询： https://lbs.amap.com/console/show/picker 
+    # 部分手机内置指南针也可查询经纬度
     lat=23.23333#小数点后五位 #纬度
     lon=233.23333  #小数点后五位 #经度
     reporttype="" #home/dawn/night
