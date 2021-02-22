@@ -44,16 +44,18 @@ run=service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
 
 if run==1:
    reportstatus=1 #这里是为了以后方便加入retry和其它通知方式
-   print("success")
+   print("mission success")
 else:
    reportstatus=0
-   print("faild")
+   print("mission faild")
 
 if mail_flag==1:
     if reportstatus==1:
         mail("成功",my_user,my_sender,SMTPdomain,SMTPauth,datetime)
+        print("mail success")
     else:
         mail("失败",my_user,my_sender,SMTPdomain,SMTPauth,datetime)
+        print("mail faild")
 
 else:
     print("未开启")
