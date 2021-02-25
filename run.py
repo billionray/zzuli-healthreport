@@ -28,7 +28,7 @@ except:
     # 部分手机内置指南针也可查询经纬度
     lat=23.23333#小数点后五位 #纬度
     lon=233.23333  #小数点后五位 #经度
-    reporttype="" #home/dawn/night
+    reporttype="" #home/morn/dorm
 #以下可选
 try:
     my_user=os.environ['MYUSER']
