@@ -138,7 +138,7 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
 
     ##############邮箱配置结束################
     ##############发送请求！！！################
-    # r=requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
+    r=requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
 
     driver.quit()
     if r.status_code ==200:
