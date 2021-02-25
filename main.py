@@ -46,15 +46,16 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
 
         ###处理每日打卡链接
         dakaurl = link.get_attribute('data-href')
-        if reporttype=="home":
-            dakaurl=dakaurl.replace('spm=0','spm=0')
-        elif reporttype=="dawn":
-            dakaurl=dakaurl.replace('spm=1','spm=0')
-        elif reporttype=="night":
-            dakaurl=dakaurl.replace('spm=3','spm=0')
-        getuserurl = dakaurl  ###截取code
+        getuserurl = dakaurl  ###截取学校储存的data
         getuserurl = getuserurl.replace('view?from=h5&', 'get_user_info?') + "&wj_type=0"
-        dakaurl = dakaurl + "&date=" + datetime
+        if reporttype=="home":
+            dakaurl = dakaurl + "&date=" + datetime
+        elif reporttype=="morn":
+            dakaurl = dakaurl + "&date=" + datetime
+            dakaurl=dakaurl.replace('xsc', 'morn')
+        elif reporttype=="dorm":
+            dakaurl = dakaurl + "&date=" + datetime
+            dakaurl=dakaurl.replace('xsc', 'dorm')
         ###结束
 
         #get cookie
@@ -137,7 +138,7 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
 
     ##############邮箱配置结束################
     ##############发送请求！！！################
-    r=requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
+    # r=requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
 
     driver.quit()
     if r.status_code ==200:
