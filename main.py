@@ -8,21 +8,7 @@ from retrying import retry
 #None
 ##############登录模块开始################
 @retry(stop_max_attempt_number=3)
-# def getlonlat(gpslocation):
-#     lonlaturl = 'https://restapi.amap.com/v3/geocode/geo?address='+gpslocation+'&key=6840459b6a540ca99eac8ef325840db3'
-#     amap = requests.get(lonlaturl)
-#     amap.encoding = 'utf-8'  # 这一行是将编码转为utf-8否则中文会显示乱码。
-#     data = amap.text
-#     lonlatdata = json.loads(data)
-#     lonlat = lonlatdata['geocodes'][0]['location']
-#     lon = lonlat.split(",")[0]
-#     lat = lonlat.split(",")[1]
-#     return lon , lat
-def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime):
-
-    # lon = getlonlat(gpslocation)[0]
-    # lat = getlonlat(gpslocation)[1]
-    # print(lon + " " + lat)
+def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,reporttype):
 
     print(username)
     loginurl = "http://kys.zzuli.edu.cn/cas/login?"
@@ -60,12 +46,19 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime):
 
         ###处理每日打卡链接
         dakaurl = link.get_attribute('data-href')
-
+        if reporttype=="home":
+            dakaurl=dakaurl.replace('spm=0','spm=0')
+        elif reporttype=="dawn":
+            dakaurl=dakaurl.replace('spm=1','spm=0')
+        elif reporttype=="night":
+            dakaurl=dakaurl.replace('spm=3','spm=0')
         getuserurl = dakaurl  ###截取code
         getuserurl = getuserurl.replace('view?from=h5&', 'get_user_info?') + "&wj_type=0"
         dakaurl = dakaurl + "&date=" + datetime
         ###结束
-        driver.get(link.get_attribute('data-href') + "&date=" + datetime)  # 切换到每日打卡页面
+
+        #get cookie
+        driver.get(link.get_attribute('data-href') + "&date=" + datetime)  
         time.sleep(1)
         selenium_cookies = driver.get_cookies()
 

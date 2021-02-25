@@ -44,10 +44,12 @@ jobs:
           GPS: ${{ secrets.GPS }}
           LAT: ${{ secrets.LAT }}
           LON: ${{ secrets.LON }}
-          USER: ${{ secrets.USER }}
-          SENDER: ${{ secrets.SENDER }}
+          USER: ${{ secrets.MYUSER }}
+          SENDER: ${{ secrets.MYSENDER }}
           SMTPDOMAIN: ${{ secrets.SMTPDOMAIN }}
           SMTPAUTH: ${{ secrets.SMTPAUTH }}
+          REPORTTYPE: ${{ secrets.REPORTTYPE }}
+          MAILFLAG: ${{ secrets.MAILFLAG }}
         run: |
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
