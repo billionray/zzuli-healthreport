@@ -8,7 +8,7 @@ from retrying import retry
 #None
 ##############登录模块开始################
 @retry(stop_max_attempt_number=3)
-def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime):
+def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,reporttype):
 
     print(username)
     loginurl = "http://kys.zzuli.edu.cn/cas/login?"
@@ -46,12 +46,19 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime):
 
         ###处理每日打卡链接
         dakaurl = link.get_attribute('data-href')
-
+        if reporttype=="home":
+            dakaurl=dakaurl.replace('spm=0','spm=0')
+        elif reporttype=="dawn":
+            dakaurl=dakaurl.replace('spm=1','spm=0')
+        elif reporttype=="night":
+            dakaurl=dakaurl.replace('spm=3','spm=0')
         getuserurl = dakaurl  ###截取code
         getuserurl = getuserurl.replace('view?from=h5&', 'get_user_info?') + "&wj_type=0"
         dakaurl = dakaurl + "&date=" + datetime
         ###结束
-        driver.get(link.get_attribute('data-href') + "&date=" + datetime)  # 切换到每日打卡页面
+
+        #get cookie
+        driver.get(link.get_attribute('data-href') + "&date=" + datetime)  
         time.sleep(1)
         selenium_cookies = driver.get_cookies()
 
