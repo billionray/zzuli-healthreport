@@ -53,6 +53,7 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
         elif reporttype=="morn":
             dakaurl = dakaurl + "&date=" + datetime
             dakaurl=dakaurl.replace('xsc', 'morn')
+            getuserurl=getuserurl.replace('&wj_type=0', '&wj_type=1')
         elif reporttype=="dorm":
             dakaurl = dakaurl + "&date=" + datetime
             dakaurl=dakaurl.replace('xsc', 'dorm')
