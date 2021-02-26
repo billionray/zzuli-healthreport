@@ -46,19 +46,21 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
 
         ###处理每日打卡链接
         dakaurl = link.get_attribute('data-href')
-        if reporttype=="home":
-            dakaurl=dakaurl.replace('spm=0','spm=0')
-        elif reporttype=="dawn":
-            dakaurl=dakaurl.replace('spm=1','spm=0')
-        elif reporttype=="night":
-            dakaurl=dakaurl.replace('spm=3','spm=0')
-        getuserurl = dakaurl  ###截取code
+        getuserurl = dakaurl  ###截取学校储存的data
         getuserurl = getuserurl.replace('view?from=h5&', 'get_user_info?') + "&wj_type=0"
-        dakaurl = dakaurl + "&date=" + datetime
+        if reporttype=="home":
+            dakaurl = dakaurl + "&date=" + datetime
+        elif reporttype=="morn":
+            dakaurl = dakaurl + "&date=" + datetime
+            dakaurl=dakaurl.replace('xsc', 'morn')
+            getuserurl=getuserurl.replace('&wj_type=0', '&wj_type=1')
+        elif reporttype=="dorm":
+            dakaurl = dakaurl + "&date=" + datetime
+            dakaurl=dakaurl.replace('xsc', 'dorm')
         ###结束
 
         #get cookie
-        driver.get(link.get_attribute('data-href') + "&date=" + datetime)  
+        driver.get(dakaurl + "&date=" + datetime)
         time.sleep(1)
         selenium_cookies = driver.get_cookies()
 
@@ -108,7 +110,7 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
     sourcedata.encoding = 'utf-8' #这一行是将编码转为utf-8否则中文会显示乱码。
     yuandata=sourcedata.text
     user_dict = json.loads(yuandata)
-    data = {
+    homedata = {
         "user_code": user_dict.get("user_code", ), "user_name": user_dict.get("user_name", ), "id_card": user_dict.get("id_card", ), "date": datetime, "sex": user_dict.get("sex", ),
         "age": user_dict.get("age", ), "org": user_dict.get("org", ), "year": user_dict.get("year", ), "spec": user_dict.get("spec", ), "class": user_dict.get("class", ), "region": "", "area": "",
         "build": "", "dorm": "", "mobile": mobile, "jt_mobile": homemobile, "province": user_dict.get("province", ), "city": user_dict.get("city", ),
@@ -125,10 +127,17 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
         "zl_province": "", "zl_city": "", "zl_district": "", "zl_area": "", "zl_address": "", "zl_sfzy": "", "zl_zyrq": "",
         "xq_province": "", "xq_city": "", "xq_district": "", "xq_area": "", "xq_address": "", "home_time": "", "wj_type": 0
     }
+    morndata={}
+    dormdata={}
 
     #####以下代码为post部分
     # 转换data字典类型为字符串类型并支持中文
-    datajson = json.dumps(data, ensure_ascii=False)
+    if reporttype=="home":
+        datajson = json.dumps(homedata, ensure_ascii=False)
+    elif reporttype == "morn":
+        datajson = json.dumps(morndata, ensure_ascii=False)
+    elif reporttype == "dorm":
+        datajson = json.dumps(dormdata, ensure_ascii=False)
     #print(datajson)
     ##############data字典处理结束################
     ##############邮箱配置开始################
