@@ -60,7 +60,7 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
         ###结束
 
         #get cookie
-        driver.get(link.get_attribute('data-href') + "&date=" + datetime)  
+        driver.get(dakaurl + "&date=" + datetime)
         time.sleep(1)
         selenium_cookies = driver.get_cookies()
 
