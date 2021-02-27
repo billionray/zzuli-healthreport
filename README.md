@@ -22,21 +22,6 @@
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
 
-<h3>本地部署</h3>
-<p>
-1.安装 Python 3 并 add to PATH
-
-2.下载本仓库，并编辑 run.py 的个人信息，具体要求详见run.py
-
-3.pip安装[依赖库](https://github.com/billionray/ZZULI-healthreport/network/dependencies)安装webdriver
-
-
-4.`python3 yourpath/run.py`即可运行一次
-
-5.添加任务到Windows任务计划/Linux crontab，实现自动化打卡。
-
-......
-
 详细步骤，请移步文档网站： <a target="_blank" href="https://daka.xwwwb.com/#/local">点我进入</a>
 </p>
 <h3>Github Actions(推荐使用)</h3>
