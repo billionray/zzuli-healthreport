@@ -62,8 +62,16 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
         #get cookie
         driver.get(dakaurl + "&date=" + datetime)
         time.sleep(1)
-        if reporttype=="morn" or reporttype=="dorm":
-            driver.switch_to.alert.accept()
+        for i in range(0,5):
+            try:
+                links = driver.find_elements_by_xpath("//a")
+                break
+            except Exception as e:
+                if 'alert' in str(e):
+                    pass
+                else:
+                    links = []
+                    break
         selenium_cookies = driver.get_cookies()
 
     ##############链接获取结束################
