@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
 
-def mail(yesorno,my_user,my_sender,SMTPdomain,SMTPauth,datetime,reporttype,username):
+def mail(yesorno,my_user,my_sender,SMTPdomain,SMTPauth,datetime):
     ret = True
     try:
         msg = MIMEText(user_dict.get("user_code", ) + ':' + '打卡' + yesorno + '！', 'plain', 'utf-8')
