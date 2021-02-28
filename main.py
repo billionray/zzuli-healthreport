@@ -8,7 +8,7 @@ from retrying import retry
 #None
 ##############登录模块开始################
 @retry(stop_max_attempt_number=3)
-def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,reporttype):
+def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,reporttype,region,area,build,dorm):
 
     print(username)
     loginurl = "http://kys.zzuli.edu.cn/cas/login?"
@@ -152,9 +152,9 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
         "hj_city":user_dict.get("hj_province", ),
         "hj_district":user_dict.get("hj_district", ),
         "out":"","out_address":"[]","hb":"","hb_area":"","hn":"","hn_area":"",
-        "lat":zxlat,"lon":zxlon,
-        "gcj_lat":zxlat,"gcj_lon":zxlon,
-        "jz_address":zxgpslocation,
+        "lat":lat,"lon":lon,
+        "gcj_lat":lat,"gcj_lon":lon,
+        "jz_address":gpslocation,
         "jz_province":"河南省",
         "jz_city":"郑州市", #禹州市
         "jz_district":"金水区",#高新区
@@ -190,9 +190,9 @@ def service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,rep
         "hj_city":user_dict.get("hj_province", ),
         "hj_district":user_dict.get("hj_district", ),
         "out":"","out_address":"[]","hb":"","hb_area":"","hn":"","hn_area":"",
-        "lat":zxlat,"lon":zxlon,
-        "gcj_lat":zxlat,"gcj_lon":zxlon,
-        "jz_address":zxgpslocation,
+        "lat":lat,"lon":lon,
+        "gcj_lat":lat,"gcj_lon":lon,
+        "jz_address":gpslocation,
         "jz_province":"河南省",
         "jz_city":"郑州市", #禹州市
         "jz_district":"金水区",#高新区

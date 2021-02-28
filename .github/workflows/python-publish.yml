@@ -50,6 +50,7 @@ jobs:
           SMTPAUTH: ${{ secrets.SMTPAUTH }}
           REPORTTYPE: ${{ secrets.REPORTTYPE }}
           MAILFLAG: ${{ secrets.MAILFLAG }}
+          INF: ${{ secrets.INF }}
         run: |
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver

@@ -29,6 +29,18 @@ except:
     lat=23.23333#小数点后五位 #纬度
     lon=233.23333  #小数点后五位 #经度
     reporttype="" #home/morn/dorm
+try:
+    inf=os.environ['INF']
+except:
+    region=""
+    area=""
+    build=""
+    dorm=""
+else:
+    region=inf.split('.',4)[0]
+    area=inf.split('.',4)[1]
+    build=inf.split('.',4)[2]
+    dorm=inf.split('.',4)[3]
 #以下可选
 try:
     my_user=os.environ['MYUSER']
@@ -40,7 +52,10 @@ except:
     my_sender="" #发件人
     SMTPdomain="" #发件人SMTP地址（SSL）
     SMTPauth="" #发件人SMTP授权码
-run=service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,reporttype)
+
+
+run=service(username,password,mobile,homemobile,gpslocation,lat,lon,datetime,reporttype,region,area,build,dorm)
+
 
 if run==1:
    reportstatus=1 #这里是为了以后方便加入retry和其它通知方式
