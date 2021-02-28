@@ -66,10 +66,10 @@ else:
 
 if mail_flag==1:
     if reportstatus==1:
-        mail("成功",my_user,my_sender,SMTPdomain,SMTPauth,datetime)
+        mail(username,"成功",my_user,my_sender,SMTPdomain,SMTPauth,datetime)
         print("mail success")
     else:
-        mail("失败",my_user,my_sender,SMTPdomain,SMTPauth,datetime)
+        mail(username,"失败",my_user,my_sender,SMTPdomain,SMTPauth,datetime)
         print("mail faild")
 
 else:

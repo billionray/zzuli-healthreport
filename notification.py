@@ -2,10 +2,10 @@ import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
 
-def mail(yesorno,my_user,my_sender,SMTPdomain,SMTPauth,datetime):
+def mail(username,yesorno,my_user,my_sender,SMTPdomain,SMTPauth,datetime):
     ret = True
     try:
-        msg = MIMEText(user_dict.get("user_code", ) + ':' + '打卡' + yesorno + '！', 'plain', 'utf-8')
+        msg = MIMEText(username + ':' + '打卡' + yesorno + '！', 'plain', 'utf-8')
         msg['From'] = formataddr(["打卡提醒", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To'] = formataddr(["您好，订阅者", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = datetime+"打卡"+yesorno  # 主题
