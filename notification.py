@@ -1,7 +1,10 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
-
+'''
+this module can notify u the report starus by different ways
+if you are not developer,you must NOT write anything in this file
+'''
 def mail(username,yesorno,my_user,my_sender,SMTPdomain,SMTPauth,datetime,reporttype):
     ret = True
     if reporttype == "home":

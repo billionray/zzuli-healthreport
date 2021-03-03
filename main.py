@@ -5,8 +5,10 @@ from selenium import webdriver
 from retrying import retry
 
 debug = 0  # 调试模式
-
-
+'''
+this module is the main module. it will get cookies and post your report data
+if you are not developer,you must NOT write anything in this file
+'''
 @retry(stop_max_attempt_number=3)
 def service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area, build,
             dorm, schoolgps, schoollat, schoollon):

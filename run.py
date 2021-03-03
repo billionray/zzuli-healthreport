@@ -2,7 +2,9 @@ import time
 import os
 from main import service
 from notification import mail
-
+'''
+this module can provide you diffrent ways to transport the information to the program
+'''
 datetime = time.strftime("%Y-%m-%d", time.localtime())
 datetime = datetime  # 日期 如果需要更改请遵循这个格式："YY-MM-DD"
 
