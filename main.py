@@ -21,11 +21,10 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
         opt.add_argument('headless')
         opt.add_argument('no-sandbox')
         opt.add_argument('disable-dev-shm-usage')
-    driver = webdriver.Chrome(options=opt)  # 创建浏览器对象
+    driver = webdriver.Chrome(options=opt)  # create the 
     driver.get(loginurl)
-    # driver.maximize_window()                      #最大化窗口
+    # driver.maximize_window()                      #maximize the window
     time.sleep(0.1)  # 加载等待
-    #####登录模块以后函数化#######
     driver.find_element_by_xpath("./*//div[@class='p-r']/input").send_keys(username)  # 输入账号
     driver.find_element_by_xpath("//input[@class='qy-log-input form-control pasword']").send_keys(password)  # 输入密码
     time.sleep(0.1)
@@ -34,12 +33,6 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
     driver.execute_script(botton)  # 登录
     time.sleep(0.1)
     #############肺炎打卡##################
-    # botton= 'document.getElementsByClassName("mui-tab-item mui-active")[0].click();'
-    # driver.execute_script(botton)
-    # time.sleep(0.5)
-    # botton= 'document.getElementsByClassName("mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3")[0].click();'
-    # driver.execute_script(botton)
-
     #############################
     #  链接处理                   #
     #############################
