@@ -2,6 +2,7 @@ import time
 import os
 from main import service
 from notification import mail
+from encode import encode
 '''
 this module can provide you diffrent ways to transport the information to the program
 '''
@@ -87,7 +88,8 @@ except:
     my_sender = ""  # 发件人
     SMTPdomain = ""  # 发件人SMTP地址（SSL）
     SMTPauth = ""  # 发件人SMTP授权码
-
+historyurl=encode(username)
+print(historyurl)
 run = service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area, build,dorm,schoolgps,schoollat,schoollon)
 
 if run == 1:
@@ -99,10 +101,10 @@ else:
 
 if mail_flag == 1:
     if reportstatus == 1:
-        mail(username, "成功", my_user, my_sender, SMTPdomain, SMTPauth, datetime,reporttype)
+        mail(username, "成功"+historyurl, my_user, my_sender, SMTPdomain, SMTPauth, datetime,reporttype)
         print("mail success")
     else:
-        mail(username, "失败", my_user, my_sender, SMTPdomain, SMTPauth, datetime,reporttype)
+        mail(username, "失败"+historyurl, my_user, my_sender, SMTPdomain, SMTPauth, datetime,reporttype)
         print("mail faild")
 
 else:
