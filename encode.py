@@ -21,5 +21,5 @@ def encode(username): #username should be text
     encrypted_text = str(base64.encodebytes(aes.encrypt(add_to_16(text))), encoding='utf8').replace('\n', '')  # 加密
     #decrypted_text = str(aes.decrypt(base64.decodebytes(bytes(encrypted_text, encoding='utf8'))).rstrip(b'\0').decode("utf8"))  # 解密
     historyurl="https://msg.zzuli.edu.cn/xsc/log?type=0&code="+encrypted_text #synthesis the url
-    finalhistoryurl=historyurl.replace('%2B', '+')
+    finalhistoryurl=historyurl.replace('+','%2B')
     return finalhistoryurl
