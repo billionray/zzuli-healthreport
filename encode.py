@@ -6,7 +6,6 @@ the report-history page code is just make the sutdents' code encrypted by AES in
 Personally I think it is not secure
 '''
 def encode(username): #username should be text
-'''
     this code may include illegal behavior,if your location did not allow you to get the personal imformation,please not use these code
     def add_to_16(s): #if key is not 16 length,it will add 0 until it is 16 length
         while len(s) % 16 != 0:
@@ -23,6 +22,5 @@ def encode(username): #username should be text
     #decrypted_text = str(aes.decrypt(base64.decodebytes(bytes(encrypted_text, encoding='utf8'))).rstrip(b'\0').decode("utf8"))  # 解密
     historyurl="https://msg.zzuli.edu.cn/xsc/log?type=0&code="+encrypted_text #synthesis the url
     finalhistoryurl=historyurl.replace('+','%2B')
-'''
     finalhistoryurl=0
     return finalhistoryurl
