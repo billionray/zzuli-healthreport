@@ -41,18 +41,22 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           MOBILE: ${{ secrets.MOBILE }}
           HOMEMOBILE: ${{ secrets.HOMEMOBILE }}
+          REPORTTYPE: ${{ secrets.REPORTTYPE }}
           GPS: ${{ secrets.GPS }}
           LAT: ${{ secrets.LAT }}
           LON: ${{ secrets.LON }}
+          MAILFLAG: ${{ secrets.MAILFLAG }}
+          REGION: ${{ secrets.REGION }}
+          AREA: ${{ secrets.AREA }}
+          BUILD: ${{ secrets.BUILD }}
+          DORM: ${{ secrets.DORM }}
+          SCHOOLGPS: ${{ secrets.SCHOOLGPS }}
+          SCHOOLLAT: ${{ secrets.SCHOOLLAT }}
+          SCHOOLLON: ${{ secrets.SCHOOLLON }}
           USER: ${{ secrets.MYUSER }}
           SENDER: ${{ secrets.MYSENDER }}
           SMTPDOMAIN: ${{ secrets.SMTPDOMAIN }}
           SMTPAUTH: ${{ secrets.SMTPAUTH }}
-          REPORTTYPE: ${{ secrets.REPORTTYPE }}
-          MAILFLAG: ${{ secrets.MAILFLAG }}
-          SCHOOLGPS: ${{ secrets.SCHOOLGPS }}
-          SCHOOLLAT: ${{ secrets.SCHOOLLAT }}
-          SCHOOLLON: ${{ secrets.SCHOOLLON }}
         run: |
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
