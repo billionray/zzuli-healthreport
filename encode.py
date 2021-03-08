@@ -6,7 +6,7 @@ the report-history page code is just make the sutdents' code encrypted by AES in
 Personally I think it is not secure
 '''
 def encode(username): #username should be text
-    this code may include illegal behavior,if your location did not allow you to get the personal imformation,please not use these code
+    #this code may include illegal behavior,if your location did not allow you to get the personal imformation,please not use these code
     def add_to_16(s): #if key is not 16 length,it will add 0 until it is 16 length
         while len(s) % 16 != 0:
             s += '\0'
