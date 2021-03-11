@@ -90,7 +90,10 @@ except:
     SMTPauth = ""  # 发件人SMTP授权码
 historyurl=encode(username)
 print(historyurl)
-run = service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area, build,dorm,schoolgps,schoollat,schoollon)
+try:
+    run = service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area, build,dorm,schoolgps,schoollat,schoollon)
+except:
+    pass
 
 if run == 1:
     reportstatus = 1  # 这里是为了以后方便加入retry和其它通知方式
