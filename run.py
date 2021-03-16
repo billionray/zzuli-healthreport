@@ -3,6 +3,7 @@ import os
 from main import service
 from notification import mail
 from encode import encode
+import json
 
 '''
 this module can provide you diffrent ways to transport the information to the program
@@ -22,6 +23,17 @@ except:
 #############################
 # 基础信息填写                #
 #############################
+ 
+self_dir = os.path.dirname(__file__)
+self_dir=self_dir+"\data.json"
+print(self_dir)
+with open(self_dir,'r', encoding='UTF-8') as f:
+    load_dict = json.load(f)
+username=load_dict.get("username", )
+password=load_dict.get("password", )   
+ 
+
+
 
 try:
     username = os.environ['USERNAME']  # 不可改动
