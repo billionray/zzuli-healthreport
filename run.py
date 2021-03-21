@@ -24,13 +24,13 @@ except:
 # 基础信息填写                #
 #############################
 
-self_dir = os.path.dirname(__file__)
-self_dir = self_dir + "\data.json"
-print(self_dir)
-with open(self_dir, 'r', encoding='UTF-8') as f:
-    load_dict = json.load(f)
-username = load_dict.get("username", )
-password = load_dict.get("password", )
+# self_dir = os.path.dirname(__file__)
+# self_dir = self_dir + "\data.json"
+# print(self_dir)
+# with open(self_dir, 'r', encoding='UTF-8') as f:
+#     load_dict = json.load(f)
+# username = load_dict.get("username", )
+# password = load_dict.get("password", )
 
 # 获取时间判断是晨检还是归寝
 nowtime = time.strftime("%H", time.localtime())
