@@ -41,7 +41,6 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           MOBILE: ${{ secrets.MOBILE }}
           HOMEMOBILE: ${{ secrets.HOMEMOBILE }}
-          REPORTTYPE: ${{ secrets.REPORTTYPE }}
           GPS: ${{ secrets.GPS }}
           LAT: ${{ secrets.LAT }}
           LON: ${{ secrets.LON }}
