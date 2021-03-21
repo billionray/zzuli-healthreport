@@ -36,10 +36,10 @@ except:
 nowtime = time.strftime("%H", time.localtime())
 nowtime = int(nowtime)
 print(f"当前时间{nowtime}时 \n")
-if (nowtime>4 and nowtime<11):
+if (nowtime>0 and nowtime<20):
     print("执行晨检打卡！\n")
     reporttype = "morn"
-elif(nowtime>18 and nowtime <23):
+elif(nowtime>20 and nowtime <23):
     print("执行归寝打卡！\n")
     reporttype = "dorm"
 
