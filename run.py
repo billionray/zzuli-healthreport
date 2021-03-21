@@ -24,18 +24,40 @@ except:
 # 基础信息填写                #
 #############################
 
+self_dir = os.path.dirname(__file__)
+self_dir = self_dir + "\data.json"
+print(self_dir)
+with open(self_dir, 'r', encoding='UTF-8') as f:
+    load_dict = json.load(f)
+username = load_dict.get("username", )
+password = load_dict.get("password", )
+
+# 获取时间判断是晨检还是归寝
+nowtime = time.strftime("%H", time.localtime())
+nowtime = int(nowtime)
+print(f"当前时间{nowtime}时 \n")
+if (nowtime>4 and nowtime<11):
+    print("执行晨检打卡！\n")
+    reporttype = "morn"
+elif(nowtime>18 and nowtime <23):
+    print("执行归寝打卡！\n")
+    reporttype = "dorm"
+
+home=1 # 将其改为1启用居家打卡
+if (home) == 1:
+    reporttype = "home"
+
+
 try:
     username = os.environ['USERNAME']  # 不可改动
     password = os.environ['PASSWORD']  # 不可改动
     mobile = os.environ['MOBILE']  # 不可改动
     homemobile = os.environ['HOMEMOBILE']  # 不可改动
-    reporttype = os.environ['REPORTTYPE']  # 不可改动
 except:
     username = ""  # 学号
     password = ""  # i轻工大密码，默认为zzuli+身份证后六位
     mobile = ""  # 电话
     homemobile = ""  # 家庭电话
-    reporttype = ""  # 打卡类型，请填写home(居家打卡)morn(晨检打卡)dorm(归寝打卡)
 
 #############################
 # 居家打卡信息填写             #
