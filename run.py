@@ -43,7 +43,7 @@ elif(nowtime>18 and nowtime <23):
     print("执行归寝打卡！\n")
     reporttype = "dorm"
 
-home=1 # 将其改为1启用居家打卡
+home=0 # 将其改为1启用居家打卡
 if (home) == 1:
     reporttype = "home"
 
