@@ -44,7 +44,7 @@ jobs:
           GPS: ${{ secrets.GPS }}
           LAT: ${{ secrets.LAT }}
           LON: ${{ secrets.LON }}
-          MAILFLAG: ${{ secrets.MAILFLAG }}
+          NOTICETYPE: ${{ secrets.NOTICETYPE }}
           REGION: ${{ secrets.REGION }}
           AREA: ${{ secrets.AREA }}
           BUILD: ${{ secrets.BUILD }}
