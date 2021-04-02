@@ -4,7 +4,7 @@ import time
 from selenium import webdriver
 from retrying import retry
 
-debug = 0  # 调试模式
+debug = 1  # 调试模式
 '''
 this module is the main module. it will get cookies and post your report data
 if you are not developer,you must NOT write anything in this file
@@ -19,10 +19,9 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
     肺炎打卡 = "https://msg.zzuli.edu.cn/xsc/view?from=h5"
 
     opt = webdriver.ChromeOptions()  # 创建浏览器
-    if debug == 0:
-        opt.add_argument('headless')
-        opt.add_argument('no-sandbox')
-        opt.add_argument('disable-dev-shm-usage')
+    opt.add_argument('headless')
+    opt.add_argument('no-sandbox')
+    opt.add_argument('disable-dev-shm-usage')
     driver = webdriver.Chrome(options=opt)  # create the 
     driver.get(loginurl)
     # driver.maximize_window()                      #maximize the window
