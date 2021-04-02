@@ -23,7 +23,7 @@ with open(self_dir, 'r', encoding='UTF-8') as f:
 
 
 try:
-    noticetype = float(os.environ['MAILFLAG'])  # 不可改动
+    noticetype = float(os.environ['NOTICETYPE'])  # 不可改动
 except:
     # noticetype = 0  # 若需要邮箱提醒请修改为1
     noticetype = load_dict.get("noticetype",)
