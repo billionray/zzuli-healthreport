@@ -16,13 +16,16 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
     #  登录模块                   #
     #############################
     loginurl = "http://kys.zzuli.edu.cn/cas/login?"
-    肺炎打卡 = "https://msg.zzuli.edu.cn/xsc/view?from=h5"
+    url2 = "https://msg.zzuli.edu.cn/xsc/view?from=h5"
 
-    opt = webdriver.ChromeOptions()  # 创建浏览器
-    opt.add_argument('headless')
-    opt.add_argument('no-sandbox')
-    opt.add_argument('disable-dev-shm-usage')
-    driver = webdriver.Chrome(options=opt)  # create the 
+    try:
+        opt = webdriver.ChromeOptions()  # 创建浏览器
+        opt.add_argument('headless')
+        opt.add_argument('no-sandbox')
+        opt.add_argument('disable-dev-shm-usage')
+        driver = webdriver.Chrome(options=opt)  # create the
+    except:
+        print("浏览器创建失败，请检查chromedriver配置")
     driver.get(loginurl)
     # driver.maximize_window()                      #maximize the window
     time.sleep(0.1)  # 加载等待
@@ -37,7 +40,7 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
     #############################
     #  链接处理                   #
     #############################
-    driver.get(肺炎打卡)
+    driver.get(url2)
 
     for link in driver.find_elements_by_xpath("//*[@data-href]"):  # 获取data-href元素
 
