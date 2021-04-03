@@ -27,8 +27,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
+        
+      - name: setup-chromedriver
+        uses: nanasess/setup-chromedriver@v1.0.1
 
-      # Runs a single command using the runners shell
       - name: 'Set up Python'
         uses: actions/setup-python@v1
         with:
@@ -57,7 +59,7 @@ jobs:
           SMTPDOMAIN: ${{ secrets.SMTPDOMAIN }}
           SMTPAUTH: ${{ secrets.SMTPAUTH }}
         run: |
-          sudo cp -p ./chrome/chromedriver /usr/bin/
-          chmod -R 777 /usr/bin/chromedriver
+          # sudo cp -p ./chrome/chromedriver /usr/bin/
+          # chmod -R 777 /usr/bin/chromedriver
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && sudo echo "202.196.0.40 msg.zzuli.edu.cn" |sudo tee -a /etc/hosts && date && python run.py
          
