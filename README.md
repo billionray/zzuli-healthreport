@@ -8,7 +8,8 @@
 <a target="_blank" href="https://daka.xwwwb.com"><img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt=""></a>
 </div>
 <br />
-<div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a></div>
+<div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a> 
+<a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 <h2>特征</h2>
 <p>👏欢迎使用郑州轻工业大学肺炎打卡脚本</p>
 <p>🎨此脚本可由Github actions、Linux crontab、Windows 计划任务定时执行</p>
