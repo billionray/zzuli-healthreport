@@ -11,7 +11,7 @@
 <div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a> 
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 
-2021.8.6更新：部分学院重新要求打卡，我们将尽快适配
+
 
 <h2>特征</h2>
 <p>👏欢迎使用郑州轻工业大学肺炎打卡脚本</p>
@@ -44,6 +44,7 @@
  
 <h2>更新记录：</h2>
 <ul>
+<li>2021.8.6更新：部分学院重新要求打卡，我们将尽快适配</li>
 <li>2021-4-2 加入从json读取数据</li>
 <li>2021-3-4 加入查看历史记录</li>
 <li>2021-3-3 完成晨检打卡，归寝打卡</li>
