@@ -15,7 +15,7 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
     #############################
     #  登录模块                   #
     #############################
-    loginurl = "http://kys.zzuli.edu.cn/cas/login?"
+    loginurl = "http://kys.zzuli.edu.cn/cas/login"
     url2 = "https://msg.zzuli.edu.cn/xsc/view?from=h5"
 
     try:
@@ -23,18 +23,22 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
         opt.add_argument('headless')
         opt.add_argument('no-sandbox')
         opt.add_argument('disable-dev-shm-usage')
-        driver = webdriver.Chrome(options=opt)  # create the
+        driver = webdriver.Chrome(options=opt)  # create the browser
     except:
         print("浏览器创建失败，请检查chromedriver配置")
     driver.get(loginurl)
     # driver.maximize_window()                      #maximize the window
     time.sleep(0.1)  # 加载等待
-    driver.find_element_by_xpath("./*//div[@class='p-r']/input").send_keys(username)  # 输入账号
-    driver.find_element_by_xpath("//input[@class='qy-log-input form-control pasword']").send_keys(password)  # 输入密码
+    script_switch1 = '$(".loginSwitch img").click()'
+    driver.execute_script(script_switch1)
     time.sleep(0.1)
-    driver.find_element_by_xpath("//input[@class='qy-log-btn is-on']").click  # 登录
-    botton = 'document.getElementsByClassName("qy-log-btn is-on")[0].click();'
-    driver.execute_script(botton)  # 登录
+    script_switch2 = '$(".changeBtn").click()'
+    driver.execute_script(script_switch2)
+    time.sleep(0.1)
+    driver.find_element_by_id("username").send_keys(username)  # 输入账号
+    driver.find_element_by_id("password").send_keys(password)  # 输入密码
+    driver.execute_script("loginIdsAndCas1()")
+
     time.sleep(0.1)
     #############肺炎打卡##################
     #############################
