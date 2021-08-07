@@ -32,7 +32,7 @@ elif (nowtime > 20 and nowtime < 24):
     reporttype = "dorm"
     
 try:
-    home = os.environ['HOME']
+    home = float(os.environ['HOME'])
 except:
     home = float(load_dict.get("home", ))
 # 将其改为1启用居家打卡 （划掉
