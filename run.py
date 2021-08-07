@@ -82,8 +82,8 @@ except:
     # lat = 33.00000  # 纬度 小数点后五位 输入时无引号
     # lon = 113.00000  # 精度 小数点后五位 输入时无引号
     gpslocation = load_dict.get("gpslocation", )
-    lat = load_dict.get("lat", )
-    lon = load_dict.get("lon", )
+    lat = float(load_dict.get("lat", ))
+    lon = float(load_dict.get("lon", ))
 
 
 #############################
