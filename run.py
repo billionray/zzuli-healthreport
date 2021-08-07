@@ -43,7 +43,11 @@ elif(nowtime>20 and nowtime <24):
     print("执行归寝打卡！\n")
     reporttype = "dorm"
 
-home=1 # 将其改为1启用居家打卡
+try:
+    home=float(os.environ['HOME'])
+except:
+    home=float(load_dict.get("home", ))
+   # 将其改为1启用居家打卡
 if (home) == 1:
     reporttype = "home"
 
