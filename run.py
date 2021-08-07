@@ -26,7 +26,7 @@ try:
     noticetype = float(os.environ['NOTICETYPE'])  # 不可改动
 except:
     # noticetype = 0  # 若需要邮箱提醒请修改为1
-    noticetype = load_dict.get("noticetype",)
+    noticetype = float(load_dict.get("noticetype",))
 #############################
 # 基础信息填写                #
 #############################
