@@ -25,13 +25,7 @@ except:
 # 获取时间判断是晨检还是归寝
 nowtime = time.strftime("%H", time.localtime())
 nowtime = int(nowtime)
-print(f"当前时间{nowtime}时 \n")
-if (nowtime > 0 and nowtime < 20):
-    print("执行晨检打卡！\n")
-    reporttype = "morn"
-elif (nowtime > 20 and nowtime < 24):
-    print("执行归寝打卡！\n")
-    reporttype = "dorm"
+print(f"\n当前时间{nowtime}时 \n")
 
 try:
     home = os.environ['HOME']
@@ -40,6 +34,15 @@ except:
 # 将其改为1启用居家打卡
 if home == 1:
     reporttype = "home"
+    print("执行居家打卡！\n")
+
+if home != 1:
+    if (nowtime > 0 and nowtime < 20):
+        print("执行晨检打卡！\n")
+        reporttype = "morn"
+    elif (nowtime > 20 and nowtime < 24):
+        print("执行归寝打卡！\n")
+        reporttype = "dorm"
 
 try:
     username = os.environ['USERNAME']  # 不可改动
