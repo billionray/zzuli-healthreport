@@ -137,10 +137,10 @@ else:
 
 if noticetype == 1:
     if reportstatus == 1:
-        mail(username, "成功", historyurl, my_user, my_sender, SMTPdomain, SMTPauth, datetime)
+        mail(username, "成功", historyurl, my_user, my_sender, SMTPdomain, SMTPauth, datetime，reporttype)
         print("打卡成功，已发送邮件")
     else:
-        mail(username, "失败", historyurl, my_user, my_sender, SMTPdomain, SMTPauth, datetime)
+        mail(username, "失败", historyurl, my_user, my_sender, SMTPdomain, SMTPauth, datetime，reporttype)
         print("打卡失败，已发送邮件")
 
 else:
