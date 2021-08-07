@@ -3,7 +3,7 @@ import requests
 import time
 from selenium import webdriver
 from retrying import retry
-
+proxies = { "http": None, "https": None}#代理
 debug = 1  # 调试模式
 '''
 this module is the main module. it will get cookies and post your report data
@@ -131,7 +131,7 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
     #  data处理                  #
     #############################
 
-    sourcedata = requests.get(getuserurl, headers=get_headers, cookies=cookies)  # 获取服务器数据
+    sourcedata = requests.get(getuserurl, headers=get_headers, cookies=cookies,proxies=proxies)  # 获取服务器数据
     sourcedata.encoding = 'utf-8'  # 这一行是将编码转为utf-8否则中文会显示乱码。
     yuandata = sourcedata.text
     user_dict = json.loads(yuandata)
@@ -270,7 +270,7 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
 
     if debug == 1:
         print(f"生成的data：\n{datajson}")
-    r = requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers)
+    r = requests.post("http://msg.zzuli.edu.cn/xsc/add", data=datajson.encode(), cookies=cookies, headers=headers,proxies=proxies)
     driver.quit()
     if r.status_code == 200:
         return (1)
