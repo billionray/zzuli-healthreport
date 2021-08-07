@@ -154,7 +154,7 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
         "jz_city": user_dict.get("city", ),
         "jz_district": user_dict.get("district", ), "jz_sfyz": "是", "sj_province": "", "sj_city": "", "sj_district": "",
         "temp": "正常",
-        "jrzz": "无", "jzqk": "", "stzk": "无症状", "jcbl": "否", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
+        "jrzz": "无", "jzqk": "", "stzk": "无", "jcbl": "否", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
         "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "hb_date": "", "jz_qzbl": "",
         "tz_qzbl": "",
         "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "",

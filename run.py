@@ -11,46 +11,35 @@ this module can provide you diffrent ways to transport the information to the pr
 datetime = time.strftime("%Y-%m-%d", time.localtime())
 datetime = datetime  # 日期 如果需要更改请遵循这个格式："YY-MM-DD"
 
-#############################
-# 是否需要邮件提醒             #
-#############################
-
 self_dir = os.path.dirname(__file__)
 self_dir = self_dir + "./data.json"
 with open(self_dir, 'r', encoding='UTF-8') as f:
     load_dict = json.load(f)
 
-
-
 try:
     noticetype = float(os.environ['NOTICETYPE'])  # 不可改动
 except:
     # noticetype = 0  # 若需要邮箱提醒请修改为1
-    noticetype = float(load_dict.get("noticetype",))
-#############################
-# 基础信息填写                #
-#############################
-
+    noticetype = float(load_dict.get("noticetype", ))
 
 # 获取时间判断是晨检还是归寝
 nowtime = time.strftime("%H", time.localtime())
 nowtime = int(nowtime)
 print(f"当前时间{nowtime}时 \n")
-if (nowtime>0 and nowtime<20):
+if (nowtime > 0 and nowtime < 20):
     print("执行晨检打卡！\n")
     reporttype = "morn"
-elif(nowtime>20 and nowtime <24):
+elif (nowtime > 20 and nowtime < 24):
     print("执行归寝打卡！\n")
     reporttype = "dorm"
 
 try:
-    home=os.environ['HOME']
+    home = os.environ['HOME']
 except:
-    home=load_dict.get("home", )
-   # 将其改为1启用居家打卡
+    home = load_dict.get("home", )
+# 将其改为1启用居家打卡
 if (home) == "1":
     reporttype = "home"
-
 
 try:
     username = os.environ['USERNAME']  # 不可改动
@@ -85,11 +74,6 @@ except:
     lat = float(load_dict.get("lat", ))
     lon = float(load_dict.get("lon", ))
 
-
-#############################
-# 在校打卡信息填写             #
-#############################
-
 try:
     region = os.environ['REGION']  # 不可改动
     area = os.environ['AREA']  # 不可改动
@@ -116,8 +100,6 @@ except:
     schoolgps = load_dict.get("schoolgps", )
     schoollat = load_dict.get("schoollat", )
     schoollon = load_dict.get("schoollon", )
-
-
 
 #############################
 # 邮件提醒信息填写（可选）       #
