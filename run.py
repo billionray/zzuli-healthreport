@@ -38,11 +38,11 @@ except:
 # 将其改为1启用居家打卡 （划掉
 if home == 1:
     reporttype = "home"
-if reporttype="morn":
+if reporttype=="morn":
     print("开始晨间打卡\n")
-elif reporttype="dorm":
+elif reporttype=="dorm":
     print("开始归寝打卡\n")
-elif reporttype="home":
+elif reporttype=="home":
     print("开始居家打卡\n")
     
 try:
