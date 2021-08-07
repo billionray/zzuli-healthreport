@@ -36,9 +36,9 @@ elif (nowtime > 20 and nowtime < 24):
 try:
     home = os.environ['HOME']
 except:
-    home = load_dict.get("home", )
+    home = float(load_dict.get("home", ))
 # 将其改为1启用居家打卡
-if home == "1":
+if home == 1:
     reporttype = "home"
 
 try:
