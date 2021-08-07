@@ -18,5 +18,5 @@
   "my_sender": "",
   "SMTPdomain": "",
   "SMTPauth": "",
-  "noticetype": ""
+  "noticetype": "1"
 }
