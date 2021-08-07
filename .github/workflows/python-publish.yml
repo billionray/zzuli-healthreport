@@ -58,6 +58,7 @@ jobs:
           SENDER: ${{ secrets.MYSENDER }}
           SMTPDOMAIN: ${{ secrets.SMTPDOMAIN }}
           SMTPAUTH: ${{ secrets.SMTPAUTH }}
+          HOME: ${{ secrets.HOME }}
         run: |
           # sudo cp -p ./chrome/chromedriver /usr/bin/
           # chmod -R 777 /usr/bin/chromedriver
