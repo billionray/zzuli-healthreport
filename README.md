@@ -13,7 +13,7 @@
 <h2>特征</h2>
 <p>👏欢迎使用郑州轻工业大学肺炎打卡脚本</p>
 <p>🎨此脚本可由Github Actions、Linux crontab、Windows 计划任务定时执行</p>
-<p>🍔欢迎Python爱好者的围观，学习</p>
+<p>🍔</p>
 
 <h2>如何使用</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
