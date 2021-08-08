@@ -8,7 +8,7 @@
 <a target="_blank" href="https://daka.xwwwb.com"><img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt=""></a>
 </div>
 <br />
-<div align="center"><a target="_blank" href="https://daka.xwwwb.com">官网&&文档页</a> 
+<div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网&&文档页</a> 
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 
 
@@ -32,11 +32,11 @@
 详细步骤，请移步文档网站： <a target="_blank" href="https://daka.xwwwb.com/#/local">点我进入</a>
 </p>
 <h3>Github Actions(推荐使用)</h3>
- <a target="_blank" href="https://daka.xwwwb.com/#/ga">点我查看教程</a><br />
+ <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/ga">点我查看教程</a><br />
 <h3>使用Docker部署到Linux服务器</h3>
- <a target="_blank" href="https://daka.xwwwb.com/#/docker">点我查看教程</a>
+ <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/docker">点我查看教程</a>
 <h3>使用Python原生环境部署到Linux服务器</h3>
- <a target="_blank" href="https://daka.xwwwb.com/#/linux">点我查看教程</a>
+ <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/linux">点我查看教程</a>
 <h2>贡献者</h2>
 
  [billionray](https://github.com/billionray) ：国教20级  
