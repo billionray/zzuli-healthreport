@@ -54,5 +54,5 @@
 </ul>
 <h2>鸣谢：</h2>
 <a href="https://www.python.org/"><img src="https://www.python.org/static/img/python-logo.png" alt="" height="50px"></a><br />
-<a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="./images/vs.png" alt="" height="50px"></a>
+<a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="https://visualstudio.microsoft.com/wp-content/uploads/2019/06/BrandVisualStudioWin2019-3.svg" alt="" height="50px"></a>
 <a href="https://www.jetbrains.com/zh-cn/pycharm/"><img src="./images/icon-pycharm.png" alt="" height="50px"></a><br />
