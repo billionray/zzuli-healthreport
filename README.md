@@ -11,8 +11,6 @@
 <div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网&&文档页</a> 
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 
-
-
 <h2>特征</h2>
 <p>👏欢迎使用郑州轻工业大学肺炎打卡脚本</p>
 <p>🎨此脚本可由Github Actions、Linux crontab、Windows 计划任务定时执行</p>
