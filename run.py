@@ -128,7 +128,7 @@ print(historyurl)
 run = 0
 try:
     run = service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area,
-                  build, dorm, schoolgps, schoollat, schoollon)
+                  build, dorm, schoolgps, schoollat, schoollon,vaccine,nucleicacidtest)
 except:
     pass
 
