@@ -11,7 +11,7 @@ if you are not developer,you must NOT write anything in this file
 '''
 @retry(stop_max_attempt_number=5,wait_fixed=10000)
 def service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area, build,
-            dorm, schoolgps, schoollat, schoollon):
+            dorm, schoolgps, schoollat, schoollon,vaccine,nucleicacidtest):
     #############################
     #  登录模块                   #
     #############################
@@ -155,7 +155,7 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
         "jz_district": user_dict.get("district", ), "jz_sfyz": "是", "sj_province": "", "sj_city": "", "sj_district": "",
         "temp": "正常",
         "jrzz": "无", "jzqk": "", "stzk": "无", "jcbl": "否", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
-        "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "hb_date": "", "jz_qzbl": "",
+        "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "jjymqk":vaccine,"hsjcqk":nucleicacidtest,"hb_date": "", "jz_qzbl": "",
         "tz_qzbl": "",
         "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "",
         "jc_jcrq": "",
