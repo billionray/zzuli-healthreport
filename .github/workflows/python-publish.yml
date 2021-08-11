@@ -59,6 +59,8 @@ jobs:
           SMTPDOMAIN: ${{ secrets.SMTPDOMAIN }}
           SMTPAUTH: ${{ secrets.SMTPAUTH }}
           HOME: ${{ secrets.HOME }}
+          VACCINE: ${{ secrets.VACCINE }}
+          NUCLEICACIDTEST: ${{ secrets.NUCLEICACIDTEST }}
         run: |
           # sudo cp -p ./chrome/chromedriver /usr/bin/
           # chmod -R 777 /usr/bin/chromedriver
