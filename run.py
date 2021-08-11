@@ -77,6 +77,16 @@ except:
     gpslocation = load_dict.get("gpslocation", )
     lat = float(load_dict.get("lat", ))
     lon = float(load_dict.get("lon", ))
+try:
+    vaccine=os.environ['VACCINE']
+    nucleicacidtest=os.environ['NUCLEICACIDTEST']
+except:
+    vaccine=load_dict.get("vaccine", )
+    nucleicacidtest=load_dict.get("nucleicacidtest", )
+
+#############################
+# 在校打卡信息填写             #
+#############################
 
 try:
     region = os.environ['REGION']  # 不可改动
