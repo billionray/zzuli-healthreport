@@ -18,5 +18,7 @@
   "my_sender": "",
   "SMTPdomain": "",
   "SMTPauth": "",
-  "noticetype": "1"
+  "noticetype": "1",
+  "vaccine":"",
+  "nucleicacidtest":""
 }
