@@ -40,6 +40,7 @@
 
 请遵守居住地和学校所在地的法律和郑州轻工业大学校规。遵守**郑州轻工业大学违纪处分管理规定之第二章第十九条之第六条规定**
 
+此项目使用[MPL-2.0 License](https://github.com/billionray/ZZULI-healthreport/blob/main/LICENSE)，当协议与居住地法律与校规冲突时，以后者为准
 
 <h2>更新记录：</h2>
 <ul>
