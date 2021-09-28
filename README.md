@@ -11,11 +11,11 @@
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 
 <h2>特征</h2>
-<p>👏</p>
-<p>🎨</p>
-<p>🍔</p>
+👏
+🎨
+🍔
 
-<h2>如何使用</h2>
+<h2>快速开始</h2>
 请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
 
 详细步骤，请移步文档网站： <a target="_blank" href="https://daka.xwwwb.com/#/local">点我进入</a>
