@@ -16,10 +16,7 @@
 🍔
 
 <h2>快速开始</h2>
-请移步官网查看文档：<a target="_blank" href="https://daka.xwwwb.com">点我进入</a>
 
-详细步骤，请移步文档网站： <a target="_blank" href="https://daka.xwwwb.com/#/local">点我进入</a>
-</p>
 <h3>Github Actions(推荐使用)</h3>
  <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/ga">点我查看教程</a><br />
 <h3>使用Docker部署到Linux服务器</h3>
