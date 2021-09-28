@@ -3,7 +3,7 @@
 <hr />
 <p align="center">🍺A script that can help you submit health information automatically🍺</p>
 <div align="center">
-<img src="https://img.shields.io/badge/Python-3.7-brightgreen" alt="">
+<img src="https://img.shields.io/badge/Python-3.9-brightgreen" alt="">
 <img src="https://img.shields.io/badge/Chrome-v88-green" alt="">
 <a target="_blank" href="https://daka.xwwwb.com"><img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt=""></a>
 </div>
