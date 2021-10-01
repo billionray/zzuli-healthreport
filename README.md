@@ -10,6 +10,8 @@
 <div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网&&文档页</a> 
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 
+有问题请提issue，能修复请发pr
+
 <h2>特征</h2>
 👏
 🎨
