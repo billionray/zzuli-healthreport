@@ -1,5 +1,5 @@
 {
-  "home": "",
+  "home": "0",
   "username": "",
   "password": "",
   "mobile": "",
@@ -12,13 +12,14 @@
   "build": "",
   "dorm": "",
   "schoolgps": "",
-  "schoollat": "0",
-  "schoollon": "0",
+  "schoollat": "",
+  "schoollon": "",
   "my_user": "",
   "my_sender": "",
   "SMTPdomain": "",
   "SMTPauth": "",
   "noticetype": "1",
-  "vaccine":"",
-  "nucleicacidtest":""
+  "vaccine":"已完成接种",
+  "nucleicacidtest":"3次",
+  "lasttest":"2021-10-09"
 }
