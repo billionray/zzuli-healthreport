@@ -14,7 +14,8 @@ datetime = datetime
 
 
 self_dir = os.path.dirname(__file__)
-self_dir = self_dir + "/data.json"
+
+self_dir = self_dir + "/" + "data.json"
 with open(self_dir, 'r', encoding='UTF-8') as f:
     load_dict = json.load(f)
 
