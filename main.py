@@ -11,7 +11,7 @@ if you are not developer,you must NOT write anything in this file
 '''
 @retry(stop_max_attempt_number=5,wait_fixed=10000)
 def service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area, build,
-            dorm, schoolgps, schoollat, schoollon,vaccine,nucleicacidtest):
+            dorm, schoolgps, schoollat, schoollon,vaccine,nucleicacidtest,lasttest):
     #############################
     #  登录模块                   #
     #############################
@@ -26,6 +26,7 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
         driver = webdriver.Chrome(options=opt)  # create the browser
     except:
         print("浏览器创建失败，请检查chromedriver配置")
+        return 0
     driver.get(loginurl)
     # driver.maximize_window()                      #maximize the window
     time.sleep(0.1)  # 加载等待
@@ -202,8 +203,9 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
         "sj_city": "",
         "sj_district": "",
         "temp": "正常",
-        "jrzz": "无", "jzqk": "", "stzk": "无症状", "jcbl": "", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
-        "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "hb_date": "", "jz_qzbl": "",
+        "jrzz": "无", "jzqk": "", "stzk": "无", "jcbl": "", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
+        "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "jkmzt": "绿色","no_jtyy": "", "no_yy": "",
+        "jjymqk": vaccine,"hsjcqk":nucleicacidtest,"last_time": lasttest,"hb_date": "", "jz_qzbl": "",
         "tz_qzbl": "",
         "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "",
         "jc_jcrq": "", "jc_province": "", "jc_city": "", "jc_district": "", "jc_area": "", "jc_address": "",
@@ -212,49 +214,52 @@ def service(username, password, mobile, homemobile, gpslocation, lat, lon, datet
         "xq_area": "", "xq_address": "", "home_time": "", "wj_type": 1
     }
 
-    dormdata = {"user_code": user_dict.get("user_code", ),
-                "user_name": user_dict.get("user_name", ),
-                "id_card": user_dict.get("id_card", ),
-                "date": datetime, "sex": user_dict.get("sex", ),
-                "age": user_dict.get("age", ),
-                "org": user_dict.get("org", ),
-                "year": user_dict.get("year", ),
-                "spec": user_dict.get("spec", ),
-                "class": user_dict.get("class", ),
-                "region": region,
-                "area": area,
-                "build": build,
-                "dorm": dorm,
-                "mobile": mobile,
-                "jt_mobile": homemobile,
-                "province": user_dict.get("province", ),
-                "city": user_dict.get("city", ),
-                "district": user_dict.get("district", ),
-                "address": user_dict.get("address", ),
-                "hjdz": user_dict.get("hjdz", ),
-                "hj_province": user_dict.get("hj_province", ),
-                "hj_city": user_dict.get("hj_province", ),
-                "hj_district": user_dict.get("hj_district", ),
-                "out": "", "out_address": "[]", "hb": "", "hb_area": "", "hn": "", "hn_area": "",
-                "lat": schoollat, "lon": schoollon,
-                "gcj_lat": schoollat, "gcj_lon": schoollon,
-                "jz_address": schoolgps,
-                "jz_province": user_dict.get("province", ),
-                "jz_city": user_dict.get("city", ),
-                "jz_district": user_dict.get("district", ),
-                "jz_sfyz": "是",
-                "sj_province": "",
-                "sj_city": "",
-                "sj_district": "",
-                "temp": "正常",
-                "jrzz": "无", "jzqk": "", "stzk": "无症状", "jcbl": "", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "",
-                "glp": "", "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "hb_date": "",
-                "jz_qzbl": "", "tz_qzbl": "", "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "",
-                "tz_address": "", "jc_yqjc": "", "jc_jcrq": "", "jc_province": "", "jc_city": "", "jc_district": "",
-                "jc_area": "", "jc_address": "", "qz_yqbl": "否", "qz_yqrq": "", "zl_province": "", "zl_city": "",
-                "zl_district": "", "zl_area": "", "zl_address": "", "zl_sfzy": "", "zl_zyrq": "", "xq_province": "",
-                "xq_city": "", "xq_district": "", "xq_area": "", "xq_address": "",
-                "home_time": "20:00", "wj_type": 3}
+    dormdata =  {
+        "user_code": user_dict.get("user_code", ),
+        "user_name": user_dict.get("user_name", ),
+        "id_card": user_dict.get("id_card", ),
+        "date": datetime, "sex": user_dict.get("sex", ),
+        "age": user_dict.get("age", ),
+        "org": user_dict.get("org", ),
+        "year": user_dict.get("year", ),
+        "spec": user_dict.get("spec", ),
+        "class": user_dict.get("class", ),
+        "region": region,
+        "area": area,
+        "build": build,
+        "dorm": dorm,
+        "mobile": mobile,
+        "jt_mobile": homemobile,
+        "province": user_dict.get("province", ),
+        "city": user_dict.get("city", ),
+        "district": user_dict.get("district", ),
+        "address": user_dict.get("address", ),
+        "hjdz": user_dict.get("hjdz", ),
+        "hj_province": user_dict.get("hj_province", ),
+        "hj_city": user_dict.get("hj_province", ),
+        "hj_district": user_dict.get("hj_district", ),
+        "out": "", "out_address": "[]", "hb": "", "hb_area": "", "hn": "", "hn_area": "",
+        "lat": schoollat, "lon": schoollon,
+        "gcj_lat": schoollat, "gcj_lon": schoollon,
+        "jz_address": schoolgps,
+        "jz_province": user_dict.get("province", ),
+        "jz_city": user_dict.get("city", ),
+        "jz_district": user_dict.get("district", ),
+        "jz_sfyz": "是",
+        "sj_province": "",
+        "sj_city": "",
+        "sj_district": "",
+        "temp": "正常",
+        "jrzz": "无", "jzqk": "", "stzk": "无", "jcbl": "", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
+        "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "jkmzt": "绿色","no_jtyy": "", "no_yy": "",
+        "jjymqk": vaccine,"hsjcqk":nucleicacidtest,"last_time": lasttest,"hb_date": "", "jz_qzbl": "",
+        "tz_qzbl": "",
+        "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "",
+        "jc_jcrq": "", "jc_province": "", "jc_city": "", "jc_district": "", "jc_area": "", "jc_address": "",
+        "qz_yqbl": "否", "qz_yqrq": "", "zl_province": "", "zl_city": "", "zl_district": "", "zl_area": "",
+        "zl_address": "", "zl_sfzy": "", "zl_zyrq": "", "xq_province": "", "xq_city": "", "xq_district": "",
+        "xq_area": "", "xq_address": "", "home_time": "20:00", "wj_type": 3
+    }
 
     #############################
     #  data处理                  #

@@ -363,3 +363,4 @@ FodyWeavers.xsd
 # PyCharm环境
 /venv/
 /.idea/
+data copy.json

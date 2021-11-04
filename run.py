@@ -80,9 +80,11 @@ except:
 try:
     vaccine=os.environ['VACCINE']
     nucleicacidtest=os.environ['NUCLEICACIDTEST']
+    lasttest=os.environ['NUCLEICACIDTEST']
 except:
     vaccine=load_dict.get("vaccine", )
     nucleicacidtest=load_dict.get("nucleicacidtest", )
+    lasttest = load_dict.get("lasttest", )
 
 #############################
 # 在校打卡信息填写             #
@@ -138,7 +140,7 @@ print(historyurl)
 run = 0
 try:
     run = service(username, password, mobile, homemobile, gpslocation, lat, lon, datetime, reporttype, region, area,
-                  build, dorm, schoolgps, schoollat, schoollon,vaccine,nucleicacidtest)
+                  build, dorm, schoolgps, schoollat, schoollon,vaccine,nucleicacidtest,lasttest)
 except:
     pass
 
