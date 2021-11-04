@@ -16,6 +16,7 @@ datetime = datetime
 self_dir = os.path.dirname(__file__)
 
 self_dir = self_dir + "/" + "data.json"
+print("文件路径："+self_dir)
 with open(self_dir, 'r', encoding='UTF-8') as f:
     load_dict = json.load(f)
 
