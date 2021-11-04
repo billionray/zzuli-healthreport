@@ -3,8 +3,8 @@ import requests
 from retrying import retry
 from selenium import webdriver
 
-from data import data_generate
-from header import header_generate
+from .data import data_generate
+from .header import header_generate
 
 proxies = {"http": None, "https": None}  # 代理
 debug = 0  # 调试模式
