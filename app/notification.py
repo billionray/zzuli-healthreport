@@ -1,11 +1,14 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
+
 '''
 this module can notify u the report starus by different ways
 if you are not developer,you must NOT write anything in this file
 '''
-def mail(username,yesorno,historyurl,my_user,my_sender,SMTPdomain,SMTPauth,datetime,reporttype):
+
+
+def mail(username, yesorno, historyurl, my_user, my_sender, SMTPdomain, SMTPauth, datetime, reporttype):
     ret = True
     if reporttype == "home":
         type = "居家"
@@ -14,10 +17,11 @@ def mail(username,yesorno,historyurl,my_user,my_sender,SMTPdomain,SMTPauth,datet
     elif reporttype == "dorm":
         type = "归寝"
     try:
-        msg = MIMEText(username+':' + type + '打卡' ':'+ yesorno + '！'+"\n"+"访问以下链接可查看打卡历史记录：\n"+historyurl , 'plain', 'utf-8')
+        msg = MIMEText(username + ':' + type + '打卡' ':' + yesorno + '！' + "\n" + "访问以下链接可查看打卡历史记录：\n" + historyurl,
+                       'plain', 'utf-8')
         msg['From'] = formataddr(["打卡提醒", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To'] = formataddr(["您好，订阅者", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
-        msg['Subject'] = datetime+type+"打卡"+yesorno  # 主题
+        msg['Subject'] = datetime + type + "打卡" + yesorno  # 主题
         server = smtplib.SMTP_SSL(SMTPdomain, 465)  # 使用SSL发送
         server.login(my_sender, SMTPauth)  # SMTP密码，这里是我的的密码
         server.sendmail(my_sender, [my_user, ], msg.as_string())
