@@ -102,7 +102,7 @@ except:
     SMTPdomain = load_dict.get("SMTPdomain", )
     SMTPauth = load_dict.get("SMTPauth", )
 history_url = encode(username)
-print(history_url)
+# print(history_url)
 run = 0
 
 data = [mobile, homemobile, gpslocation, lat, lon, region, area, build, dorm, schoolgps, schoollat, schoollon, vaccine,
