@@ -2,7 +2,6 @@ import requests
 from requests_html import HTMLSession
 import json
 import base64
-import data 
 from .data import data_generate
 
 binPwd = password.encode('utf-8')
