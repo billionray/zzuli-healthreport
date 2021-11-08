@@ -2,9 +2,9 @@ import requests
 from requests_html import HTMLSession
 import json
 import base64
+import data 
+from .data import data_generate
 
-username = "填入账号"
-password = '填入密码'
 binPwd = password.encode('utf-8')
 base64Pwd = base64.b64encode(binPwd).decode('utf-8')
 session=HTMLSession()
@@ -46,5 +46,6 @@ print(data)
 postResponse = session.post(url=url, headers=postHeader, cookies=postCookie, data=data)
 
 userCookie = postResponse.cookies
-
+userHeader = postResponse.headers
 print(userCookie)
+print(userHeader)
