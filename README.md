@@ -33,7 +33,6 @@
 
  [billionray](https://github.com/billionray) ：国教20级  
  [xwwwb](https://github.com/xwwwb) ：数信➡️计通20级
- 
  [skyiea314](https://github.com/skyiea314)
 
 <h2>⚠风险提示和免责声明</h2>
@@ -46,20 +45,23 @@
 
 此项目使用[MPL-2.0 License](https://github.com/billionray/ZZULI-healthreport/blob/main/LICENSE)，当协议与居住地法律与校规冲突时，以后者为准
 
-<h2>更新记录：</h2>
+<h2>更新路线：</h2>
 <ul>
-<li>2021-11-4 已适配本轮郑州疫情最新的打卡数据</li>
-<li>2021-9-28 完美兼容各年级人脸识别打卡</li>
-<li>2021-8-14 适配表单内容：所在地风险等级、所在区域管理分类、健康码状态</li>
-<li>2021-8-11 适配居家打卡要求填入疫苗和核酸情况</li>
-<li>2021-8-8 部分学院要求重新打卡，已完成适配</li>
-<li>2021-4-2 加入从json读取数据</li>
-<li>2021-3-4 加入查看历史记录</li>
-<li>2021-3-3 完成晨检打卡，归寝打卡</li>
-<li>2021-2-9 Github actions完成！</li>
-<li>2021-2-7 22:05 模块化完成！</li>
-<li>2021-2-7 从学校服务器端获取部分数据以减少信息填入</li>
-<li>2021-2-4 初次提交代码</li>
+<li>-[]2021寒假 django网站/data.json生成</li>
+<li>-[]2021寒假 requests替换selenium</li>
+<li>✅2021-11-15 再次适配新的打卡数据</li>
+<li>✅2021-11-4 已适配本轮郑州疫情最新的打卡数据</li>
+<li>✅2021-9-28 完美兼容各年级人脸识别打卡</li>
+<li>✅2021-8-14 适配表单内容：所在地风险等级、所在区域管理分类、健康码状态</li>
+<li>✅2021-8-11 适配居家打卡要求填入疫苗和核酸情况</li>
+<li>✅2021-8-8 部分学院要求重新打卡，已完成适配</li>
+<li>✅2021-4-2 加入从json读取数据</li>
+<li>✅2021-3-4 加入查看历史记录</li>
+<li>✅2021-3-3 完成晨检打卡，归寝打卡</li>
+<li>✅2021-2-9 Github actions完成！</li>
+<li>✅2021-2-7 22:05 模块化完成！</li>
+<li>✅2021-2-7 从学校服务器端获取部分数据以减少信息填入</li>
+<li>✅2021-2-4 初次提交代码</li>
 </ul>
 <h2>鸣谢：</h2>
 <a href="https://www.python.org/"><img src="https://www.python.org/static/img/python-logo.png" alt="" height="50px"></a><br />
