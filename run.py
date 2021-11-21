@@ -68,7 +68,7 @@ except:
 try:
     vaccine = os.environ['VACCINE']
     nucleicacidtest = os.environ['NUCLEICACIDTEST']
-    lasttest = os.environ['NUCLEICACIDTEST']
+    lasttest = os.environ['LASTTEST']
 except:
     vaccine = load_dict.get("vaccine", )
     nucleicacidtest = load_dict.get("nucleicacidtest", )
