@@ -19,15 +19,15 @@
 
 <h2>快速开始</h2>
 
-<h3>Github Actions(推荐使用)</h3>
+<h3>Github Actions(推荐)</h3>
  <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/ga">点我查看教程</a><br />
  
  注意：如果您merge了最新的commits，请参见上面的链接更新LASTTEST等变量
-<h3>使用Docker部署到Linux服务器</h3>
+<h3>使用Docker部署到Linux</h3>
  <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/docker">点我查看教程</a>
-<h3>使用Python原生环境部署到Linux服务器</h3>
+<h3>使用Python原生环境部署到Linux</h3>
  <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/linux">点我查看教程</a>
-<h3>部署到Windows(两校区每晚断电，不推荐使用)</h3>
+<h3>部署到Windows（不推荐)</h3>
  <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/local">点我查看教程</a>
 <h2>贡献者</h2>
 
