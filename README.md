@@ -30,7 +30,7 @@
 <h2>贡献者</h2>
 
  [billionray](https://github.com/billionray) ：国教20级  
- [xwwwb](https://github.com/xwwwb) ：数信20级
+ [xwwwb](https://github.com/xwwwb) ：数信➡️计通20级
  
  [skyiea314](https://github.com/skyiea314)
 
