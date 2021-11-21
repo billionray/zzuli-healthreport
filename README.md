@@ -21,6 +21,8 @@
 
 <h3>Github Actions(推荐使用)</h3>
  <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/ga">点我查看教程</a><br />
+ 
+ 注意：如果您merge了最新的commits，请参见上面的链接更新LASTTEST等变量
 <h3>使用Docker部署到Linux服务器</h3>
  <a target="_blank" href="https://xwwwb.github.io/zzulidakadocs/#/docker">点我查看教程</a>
 <h3>使用Python原生环境部署到Linux服务器</h3>
