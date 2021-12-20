@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbillionray%2FZZULI-healthreport.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbillionray%2FZZULI-healthreport?ref=badge_shield)
+
 <!-- div align=center><img style="width: 60%;" src="./images/title.png"></div>-->
 <h1 align="center">🎉郑州轻工业大学nCov肺炎健康打卡脚本🎉</h1>
 <hr />
@@ -67,3 +69,7 @@
 <a href="https://www.python.org/"><img src="https://www.python.org/static/img/python-logo.png" alt="" height="50px"></a><br />
 <a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="https://visualstudio.microsoft.com/wp-content/uploads/2019/06/BrandVisualStudioWin2019-3.svg" alt="" height="50px"></a>
 <a href="https://www.jetbrains.com/zh-cn/pycharm/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/96px-PyCharm_Icon.svg.png"></a><br />
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbillionray%2FZZULI-healthreport.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbillionray%2FZZULI-healthreport?ref=badge_large)
