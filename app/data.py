@@ -27,6 +27,8 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
     vaccine = data[12]
     nucleicacidtest = data[13]
     lasttest = data[14]
+    novaccine_reason=data[15]
+    novaccine_detail=data[16]
 
     home_data = {
         "user_code": user_dict.get("user_code", ),
@@ -89,6 +91,9 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
         "other": "无",
         "jjymqk": vaccine,
         "hsjcqk": nucleicacidtest,
+        "no_yy":novaccine_reason,
+        "no_jtyy":novaccine_detail,
+        "last_time": lasttest,
         "fxdj": "低风险", "flgl": "正常", "jkmzt": "绿色", "hb_date": "", "jz_qzbl": "",
         "tz_qzbl": "",
         "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "",
@@ -138,7 +143,12 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
         "temp": "正常",
         "jrzz": "无", "jzqk": "", "stzk": "无", "jcbl": "", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
         "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "jkmzt": "绿色", "no_jtyy": "", "no_yy": "",
-        "jjymqk": vaccine, "hsjcqk": nucleicacidtest, "last_time": lasttest, "hb_date": "", "jz_qzbl": "",
+        "jjymqk": vaccine, 
+        "hsjcqk": nucleicacidtest, 
+        "no_yy":novaccine_reason,
+        "no_jtyy":novaccine_detail,
+        "last_time": lasttest, 
+        "hb_date": "", "jz_qzbl": "",
         "tz_qzbl": "",
         "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "",
         "jc_jcrq": "", "jc_province": "", "jc_city": "", "jc_district": "", "jc_area": "", "jc_address": "",

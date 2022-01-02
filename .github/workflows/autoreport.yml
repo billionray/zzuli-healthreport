@@ -61,6 +61,8 @@ jobs:
           HOME: ${{ secrets.HOME }}
           VACCINE: ${{ secrets.VACCINE }}
           NUCLEICACIDTEST: ${{ secrets.NUCLEICACIDTEST }}
+          NOVACCINEREASON: ${{ secrets.NOVACCINEREASON }}
+          NOVACCINEDETAIL: ${{ secrets.NOVACCINEDETAIL }}
         run: |
           # sudo cp -p ./chrome/chromedriver /usr/bin/
           # chmod -R 777 /usr/bin/chromedriver
