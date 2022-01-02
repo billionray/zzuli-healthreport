@@ -69,14 +69,20 @@ try:
     vaccine = os.environ['VACCINE']
     nucleicacidtest = os.environ['NUCLEICACIDTEST']
     lasttest = os.environ['LASTTEST']
-    novaccine_reason=os.environ['NOVACCINEREASON']
-    novaccine_detail=os.environ['NOVACCINEDETAIL']
+
 except:
     vaccine = load_dict.get("vaccine", )
     nucleicacidtest = load_dict.get("nucleicacidtest", )
     lasttest = load_dict.get("lasttest", )
+try:
+    novaccine_reason=os.environ['NOVACCINEREASON']
+    novaccine_detail=os.environ['NOVACCINEDETAIL']
+except:
     novaccine_reason = load_dict.get("novaccine_reason", )
     novaccine_detail = load_dict.get("novaccine_detail", )
+except:
+    novaccine_reason = ""
+    novaccine_detail = ""
 
 try:
     region = os.environ['REGION']
