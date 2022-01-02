@@ -27,6 +27,8 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
     vaccine = data[12]
     nucleicacidtest = data[13]
     lasttest = data[14]
+    novaccine_reason=data[15]
+    novaccine_detail=data[16]
 
     home_data = {
         "user_code": user_dict.get("user_code", ),
