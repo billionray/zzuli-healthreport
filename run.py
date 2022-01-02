@@ -78,11 +78,12 @@ try:
     novaccine_reason=os.environ['NOVACCINEREASON']
     novaccine_detail=os.environ['NOVACCINEDETAIL']
 except:
-    novaccine_reason = load_dict.get("novaccine_reason", )
-    novaccine_detail = load_dict.get("novaccine_detail", )
-except:
-    novaccine_reason = ""
-    novaccine_detail = ""
+    try:
+        novaccine_reason = load_dict.get("novaccine_reason", )
+        novaccine_detail = load_dict.get("novaccine_detail", )
+    except:
+        novaccine_reason = ""
+        novaccine_detail = ""
 
 try:
     region = os.environ['REGION']
