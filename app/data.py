@@ -87,6 +87,7 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
         "gld": "",
         "gla": "",
         "glyy": "",
+        "glztlb": "",
         "yjs": 0,
         "other": "无",
         "jjymqk": vaccine,
