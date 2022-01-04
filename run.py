@@ -25,7 +25,7 @@ nowtime = time.strftime("%H", time.localtime())
 nowtime = int(nowtime)
 print(f"当前时间{nowtime}时 \n")
 report_type = "morn"
-if 0 < nowtime < 20:
+if 0 <= nowtime < 20:
     report_type = "morn"
 elif 20 <= nowtime <= 24:
     report_type = "dorm"
