@@ -9,7 +9,7 @@ from app.notification import mail
 '''
 this module can provide you different ways to transport the information to the program
 '''
-datetime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+datetime = time.strftime("%Y-%m-%d", time.localtime())
 datetime = datetime
 
 
