@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /venv/
 /.idea/
 data copy.json
+.DS_Store
