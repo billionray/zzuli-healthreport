@@ -13,7 +13,7 @@ RUN apt install -y tzdata zip python3 python3-pip
 RUN ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime 
 RUN echo ${TZ} > /etc/timezone 
 RUN dpkg-reconfigure --frontend noninteractive tzdata  
-RUN dpkg -i chromev88.deb ;exit 0 
+RUN dpkg -i chrome.deb ;exit 0 
 RUN apt --fix-broken install -y
 RUN rm -rf /var/lib/apt/lists/*
 	
