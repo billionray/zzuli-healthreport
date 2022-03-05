@@ -72,6 +72,9 @@ schoollon: 113.30692
 <li>✅2021-02-07 从学校服务器端获取部分数据以减少信息填入</li>
 <li>✅2021-02-04 初次提交代码</li>
 </ul>
+
+![Alt](https://repobeats.axiom.co/api/embed/bb22485e12ef2414bde7533a0f6eece3c48786ac.svg "Repobeats analytics image")
+
 <h2>鸣谢：</h2>
 <a href="https://www.python.org/"><img src="https://www.python.org/static/img/python-logo.png" alt="" height="50px"></a><br />
 <a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="https://visualstudio.microsoft.com/wp-content/uploads/2019/06/BrandVisualStudioWin2019-3.svg" alt="" height="50px"></a>
