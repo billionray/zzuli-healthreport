@@ -132,7 +132,7 @@ else:
 
 if notice_type == 1:
     if report_status == 1:
-        mail(username, "成功", history_url, "admin@zhangz1.top", "2659445660@qq.com", "smtp.qq.com", "trbbqwlysfncdihd", datetime, report_type)
+        mail(username, "成功", history_url, "admin@zhangz1.top", "admin@znzzi.com", "exmail.qq.com", "Jb010903", datetime, report_type)
         print("打卡成功，已发送邮件")
     else:
         mail(username, "失败", history_url, "admin@zhangz1.top", "2659445660@qq.com", "smtp.qq.com", "trbbqwlysfncdihd", datetime, report_type)
