@@ -47,7 +47,7 @@
 
 此项目使用[MPL-2.0 License](https://github.com/billionray/ZZULI-healthreport/blob/main/LICENSE)，当协议与居住地法律与校规冲突时，以后者为准
 
-<h2>更新路线：</h2>
+<h2>更新路线:</h2>
 <ul>
 <li>-[]2022寒假 django网站/data.json生成</li>
 <li>-[]2022寒假 requests替换selenium</li>
