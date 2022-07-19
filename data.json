@@ -19,9 +19,9 @@
   "SMTPdomain": "",
   "SMTPauth": "",
   "noticetype": "1",
-  "vaccine":"已完成接种",
-  "nucleicacidtest":"更多次",
-  "lasttest":"2021-11-15",
+  "vaccine":"已完成加强针",
+  "nucleicacidtest":"",
+  "lasttest":"",
   "novaccine_reason":"",
   "novaccine_detail":""
 }
