@@ -25,7 +25,7 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
     schoollat = data[10]
     schoollon = data[11]
     vaccine = data[12]
-    nucleicacidtest = “”
+    nucleicacidtest = data[13]
     lasttest = data[14]
     novaccine_reason=data[15]
     novaccine_detail=data[16]
@@ -91,7 +91,7 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
         "yjs": 0,
         "other": "无",
         "jjymqk": vaccine,
-        "hsjcqk": nucleicacidtest,
+        "hsjcqk": “”,
         "no_yy":novaccine_reason,
         "no_jtyy":novaccine_detail,
         "last_time": datetime,
