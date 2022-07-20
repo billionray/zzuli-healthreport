@@ -25,7 +25,7 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
     schoollat = data[10]
     schoollon = data[11]
     vaccine = data[12]
-    nucleicacidtest = data[13]
+    nucleicacidtest = “”
     lasttest = data[14]
     novaccine_reason=data[15]
     novaccine_detail=data[16]
