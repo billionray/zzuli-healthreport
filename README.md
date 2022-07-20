@@ -1,4 +1,4 @@
-> **请合并最新代码以确保打卡信息正常**
+> **请合并最新代码以确保打卡信息正常**很抱歉昨日的错误commit导致了数据异常
 
 <h1 align="center">🎉郑州轻工业大学nCov健康打卡脚本🎉</h1>
 <hr />
@@ -10,8 +10,6 @@
 </div>
 <div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网&&文档页</a> 
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
-
-有问题请提issue，能修复请发pr
 
 <h2>⚠风险提示和免责声明</h2>
 
