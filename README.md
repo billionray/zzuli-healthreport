@@ -1,10 +1,4 @@
-> **归家后请修改home = 1 且确保地址信息填写完整，请持续关注本项目，合并最新代码以确保打卡信息正常**
-> 地址范例，请参照更改
-```
-
-[快速指引](https://xwwwb.github.io/zzulidakadocs/#/github_action?id=在校打卡)
-
-```
+> **<font color="red">请合并最新代码以确保打卡信息正常</font>**
 
 <h1 align="center">🎉郑州轻工业大学nCov健康打卡脚本🎉</h1>
 <hr />
