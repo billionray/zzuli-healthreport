@@ -67,12 +67,12 @@ except:
     lon = float(load_dict.get("lon", ))
 try:
     vaccine = os.environ['VACCINE']
-    nucleicacidtest = os.environ['NUCLEICACIDTEST']
+    #nucleicacidtest = os.environ['NUCLEICACIDTEST']
     lasttest = os.environ['LASTTEST']
 
 except:
     vaccine = load_dict.get("vaccine", )
-    nucleicacidtest = load_dict.get("nucleicacidtest", )
+    #nucleicacidtest = load_dict.get("nucleicacidtest", )
     lasttest = load_dict.get("lasttest", )
 try:
     novaccine_reason=os.environ['NOVACCINEREASON']
