@@ -114,6 +114,8 @@ except:
     SMTPauth = load_dict.get("SMTPauth", )
 history_url = encode(username)
 # print(history_url)
+
+nucleicacidtest=""
 run = 0
 
 data = [mobile, homemobile, gpslocation, lat, lon, region, area, build, dorm, schoolgps, schoollat, schoollon, vaccine,
