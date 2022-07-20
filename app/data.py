@@ -76,7 +76,7 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
         "temp": "正常",
         "jrzz": "无",
         "jzqk": "",
-        "stzk": "无",
+        "stzk": "健康",
         "jcbl": "否",
         "jcqk": "",
         "yqgl": "否",
