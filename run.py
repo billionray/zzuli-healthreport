@@ -67,12 +67,12 @@ except:
     lon = float(load_dict.get("lon", ))
 try:
     vaccine = os.environ['VACCINE']
-    nucleicacidtest = os.environ['NUCLEICACIDTEST']
+    #nucleicacidtest = os.environ['NUCLEICACIDTEST']
     lasttest = os.environ['LASTTEST']
 
 except:
     vaccine = load_dict.get("vaccine", )
-    nucleicacidtest = load_dict.get("nucleicacidtest", )
+    #nucleicacidtest = load_dict.get("nucleicacidtest", )
     lasttest = load_dict.get("lasttest", )
 try:
     novaccine_reason=os.environ['NOVACCINEREASON']
@@ -114,6 +114,8 @@ except:
     SMTPauth = load_dict.get("SMTPauth", )
 history_url = encode(username)
 # print(history_url)
+
+nucleicacidtest=""
 run = 0
 
 data = [mobile, homemobile, gpslocation, lat, lon, region, area, build, dorm, schoolgps, schoollat, schoollon, vaccine,
