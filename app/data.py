@@ -149,7 +149,7 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
         "hsjcqk": nucleicacidtest, 
         "no_yy":novaccine_reason,
         "no_jtyy":novaccine_detail,
-        "last_time": lasttest,
+        "last_time": datetime,
         "glztlb": "",
         "last_result": "阴性",
         "hb_date": "", "jz_qzbl": "",
