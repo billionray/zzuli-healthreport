@@ -1,4 +1,4 @@
-> **我们已跟随最新政策适配了打卡时间和表单 同步repo请见下方 glory to zzuli 929**
+> **我们已跟随最新政策适配了打卡时间和表单 更新代码请见下方 您应该再次明确知晓并同意风险提示和免责声明 glory to zzuli 929🎉🆓**
 
 <h1 align="center">🎉郑州轻工业大学nCov健康打卡脚本🎉</h1>
 <hr />
@@ -10,10 +10,12 @@
 </div>
 <div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网&&文档页</a> 
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
+<a target="_blank" href="https://github.com/billionray/zzuli-healthreport/issues/new">联系我们</a></div>
 
 <h2>如何更新</h2>
 请前往自己的仓库
-点击Sync Fork 即可
+点击Sync Fork（同步分支） 即可
+我们将多用 pull request 以避免 master 分支可能出现的表单错误
 
 <h2>⚠风险提示和免责声明</h2> 
 
@@ -21,7 +23,7 @@
 
 请勿用于实际使用，用于实际使用的一切后果由使用者承担，本脚本开发者不负任何责任。**打卡默认为您在的状态符合学校要求和防疫规定，若您身体不适/在中高风险、风控区，请手动打卡提交即时数据并及时向属地、辅导员及学校报告！**
 
-请遵守居住地和学校所在地的法律和郑州轻工业大学校规。遵守**郑州轻工业大学违纪处分管理规定之第二章第十九条之第六条规定**
+请遵守居住地和学校所在地的法律和校规。遵守**郑州轻工业大学违纪处分管理规定之第二章第十九条之第六条规定**
 
 此项目使用[MPL-2.0 License](https://github.com/billionray/ZZULI-healthreport/blob/main/LICENSE)，当协议与本声明和居住地法律与校规冲突时，以后者为准！
 
@@ -52,6 +54,7 @@
 
 <h2>更新路线：</h2>
 <ul>
+<li>✅2022-10-01 适配929表单 开摆！🫠🫠🫠glory to zzuli 929🎉🆓</li>
 <li>✅2022-09-14 适配最新表单 开摆！🫠🫠🫠</li>
 <li>✅2022-07-20 适配最新表单</li>
 <li>✅2022-01-02 适配寒假居家打卡和未打疫苗的数据</li>
