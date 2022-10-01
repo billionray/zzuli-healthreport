@@ -28,8 +28,8 @@ report_type = "morn"
 if 0 <= nowtime < 20:
     report_type = "morn"
 elif 20 <= nowtime <= 24:
-    report_type = "dorm"
-
+#    report_type = "dorm"
+    report_type = "morn"
 try:
     home = float(os.environ['HOME'])
 except:
