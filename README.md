@@ -11,6 +11,10 @@
 <div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网&&文档页</a> 
 <a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 
+<h2>如何更新</h2>
+请前往自己的仓库
+点击Sync Fork 即可
+
 <h2>⚠风险提示和免责声明</h2> 
 
 此项目仅供学習用，您不应该将此脚本用于健康日报，下载后请于24小时内删除源代码。
