@@ -13,7 +13,7 @@ def mail(username, yesorno, historyurl, my_user, my_sender, SMTPdomain, SMTPauth
     if reporttype == "home":
         type = "居家"
     elif reporttype == "morn":
-        type = "晨检"
+        type = "健康"
     elif reporttype == "dorm":
         type = "归寝"
     try:
