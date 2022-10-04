@@ -1,4 +1,5 @@
 import time
+
 import requests
 from retrying import retry
 from selenium import webdriver
@@ -98,6 +99,8 @@ def service(username, password, datetime, report_type, data):
         print(f"header处理的结果：\n{headers[1]}")
 
     data_json = data_generate(getuserurl, headers, cookies, proxies, debug, report_type, data, datetime)
+
+    print(data_json)
 
     if debug == 1:
         print(f"生成的data：\n{data_json}")

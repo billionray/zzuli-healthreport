@@ -20,8 +20,6 @@
   "SMTPauth": "",
   "noticetype": "1",
   "vaccine":"已完成加强针",
-  "nucleicacidtest":"",
-  "lasttest":"",
   "novaccine_reason":"",
   "novaccine_detail":""
 }
