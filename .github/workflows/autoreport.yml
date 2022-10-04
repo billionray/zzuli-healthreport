@@ -66,5 +66,5 @@ jobs:
         run: |
           # sudo cp -p ./chrome/chromedriver /usr/bin/
           # chmod -R 777 /usr/bin/chromedriver
-          cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && sudo echo "202.196.0.40 msg.zzuli.edu.cn" |sudo tee -a /etc/hosts && date && python run.py
+          cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && sudo echo "202.196.0.40 msg.zzuli.edu.cn" |sudo tee -a /etc/hosts && date && python start.py
          
