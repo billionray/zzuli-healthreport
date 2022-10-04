@@ -100,8 +100,6 @@ def service(username, password, datetime, report_type, data):
 
     data_json = data_generate(getuserurl, headers, cookies, proxies, debug, report_type, data, datetime)
 
-    print(data_json)
-
     if debug == 1:
         print(f"生成的data：\n{data_json}")
     result = requests.post("http://msg.zzuli.edu.cn/xsc/add", data=data_json.encode(), cookies=cookies,

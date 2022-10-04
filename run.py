@@ -108,7 +108,7 @@ except:
     SMTPdomain = load_dict.get("SMTPdomain", )
     SMTPauth = load_dict.get("SMTPauth", )
 history_url = encode(username)
-print(history_url)
+
 nucleicacidtest = ""
 run = 0
 
