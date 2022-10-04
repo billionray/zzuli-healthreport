@@ -32,7 +32,7 @@ os.remove("./code/data.json")
 if os.path.exists('/.dockerenv'):
     copyfile("./config/data.json", "./code/data.json")
 else:
-    copyfile("./data copy.json", "./code/data.json")
+    copyfile("./data.json", "./code/data.json")
 
 os.system("cd code && python3 run.py")
 
