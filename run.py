@@ -107,7 +107,7 @@ except:
     my_sender = load_dict.get("my_sender", )
     SMTPdomain = load_dict.get("SMTPdomain", )
     SMTPauth = load_dict.get("SMTPauth", )
-history_url = encode(username)
+# history_url = encode(username)
 
 nucleicacidtest = ""
 run = 0
@@ -128,10 +128,10 @@ else:
 
 if notice_type == 1:
     if report_status == 1:
-        mail(username, "成功", history_url, my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
+        mail(username, "成功", my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
         print("打卡成功，已发送邮件")
     else:
-        mail(username, "失败", history_url, my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
+        mail(username, "失败", my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
         print("打卡失败，已发送邮件")
 else:
     print("未开启通知")
