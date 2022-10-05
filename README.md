@@ -1,4 +1,4 @@
-> **我们已跟随最新政策适配了打卡时间和表单 更新代码请见下方 您应该再次明确知晓并同意风险提示和免责声明 **
+> **我们已跟随最新政策适配了打卡时间和表单 更新代码请见下方 您应该再次明确知晓并同意风险提示和免责声明**
 
 <h1 align="center">🎉郑州轻工业大学nCov健康打卡脚本🎉</h1>
 <hr />
@@ -8,16 +8,14 @@
 <img src="https://img.shields.io/badge/Chrome-v88-green" alt="">
 <a target="_blank" href="https://daka.xwwwb.com"><img src="https://img.shields.io/badge/Docs-latest-blueviolet" alt=""></a>
 </div>
-<div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网文档</a> 
-<a target="_blank" href="https://github.com/xwwwb/zzuli_healthreport_docker">docker适配仓库</a>
-<a target="_blank" href="https://github.com/xwwwb/zzuli_healthreport_back_end">通知服务后端</a>
+<div align="center"><a target="_blank" href="https://xwwwb.github.io/zzulidakadocs">官网&&文档页</a> 
+<a target="_blank" href="https://github.com/xwwwb/ZzuliDakaWeb">自动打卡网站仓库！</a></div>
 <a target="_blank" href="https://github.com/billionray/zzuli-healthreport/issues/new">联系我们</a></div>
 
-<h2>本项目现已支持自动更新🎉🎉🎉 </h2>
-老用户：
-打开您的仓库 点击Sync Fork 即可更新到最新版本 然后未来就再也不用Sync Fork啦 每次运行前都会自动更新代码 <br/>
-新用户：
-参看下方的 快速开始
+<h2>如何更新</h2>
+请前往自己的仓库
+点击Sync Fork（同步分支） 即可
+我们将多用 pull request 以避免 master 分支可能出现的表单错误
 
 <h2>⚠风险提示和免责声明</h2> 
 
@@ -56,8 +54,6 @@
 
 <h2>更新路线：</h2>
 <ul>
-<li>✅2022-10-04 加入统一推送 方便通知软件动态</li>
-<li>✅2022-10-04 支持自动更新 以后不用频繁sync了 修改打卡时间到晚上</li>
 <li>✅2022-10-01 适配929表单 开摆！🫠🫠🫠glory to zzuli 929🎉🆓</li>
 <li>✅2022-09-14 适配最新表单 开摆！🫠🫠🫠</li>
 <li>✅2022-07-20 适配最新表单</li>
@@ -80,6 +76,6 @@
 ![Alt](https://repobeats.axiom.co/api/embed/bb22485e12ef2414bde7533a0f6eece3c48786ac.svg "Repobeats analytics image")
 
 <h2>鸣谢：</h2>
-Python
-pycharm
-visual studio
+<a href="https://www.python.org/"><img src="https://www.python.org/static/img/python-logo.png" alt="" height="50px"></a><br />
+<a href="https://visualstudio.microsoft.com/zh-hans/vs/"><img src="https://visualstudio.microsoft.com/wp-content/uploads/2019/06/BrandVisualStudioWin2019-3.svg" alt="" height="50px"></a>
+<a href="https://www.jetbrains.com/zh-cn/pycharm/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/96px-PyCharm_Icon.svg.png"></a><br />

@@ -26,9 +26,9 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
     schoollon = data[11]
     vaccine = data[12]
     nucleicacidtest = data[13]
-    # lasttest = data[14]
-    novaccine_reason=data[14]
-    novaccine_detail=data[15]
+    lasttest = data[14]
+    novaccine_reason=data[15]
+    novaccine_detail=data[16]
 
     home_data = {
         "user_code": user_dict.get("user_code", ),
@@ -199,7 +199,7 @@ def data_generate(get_user_url, headers, cookies, proxies, debug, report_type, d
         "temp": "正常",
         "jrzz": "无", "jzqk": "", "stzk": "健康", "jcbl": "", "jcqk": "", "yqgl": "否", "glrq": "", "gljc": "", "glp": "",
         "glc": "", "gld": "", "gla": "", "glyy": "", "yjs": 0, "other": "无", "jkmzt": "绿色", "no_jtyy": "", "no_yy": "",
-        "jjymqk": vaccine, "hsjcqk": nucleicacidtest, "last_time": datetime, "hb_date": "", "jz_qzbl": "",
+        "jjymqk": vaccine, "hsjcqk": nucleicacidtest, "last_time": lasttest, "hb_date": "", "jz_qzbl": "",
         "tz_qzbl": "",
         "tz_province": "", "tz_city": "", "tz_district": "", "tz_area": "", "tz_address": "", "jc_yqjc": "",
         "jc_jcrq": "", "jc_province": "", "jc_city": "", "jc_district": "", "jc_area": "", "jc_address": "",

@@ -12,6 +12,7 @@ this module can provide you different ways to transport the information to the p
 datetime = time.strftime("%Y-%m-%d", time.localtime())
 datetime = datetime
 
+
 with open("data.json", 'r', encoding='UTF-8') as f:
     load_dict = json.load(f)
 
@@ -27,6 +28,7 @@ report_type = "morn"
 if 0 <= nowtime < 20:
     report_type = "morn"
 elif 20 <= nowtime <= 24:
+#    report_type = "dorm"
     report_type = "morn"
 try:
     home = float(os.environ['HOME'])
@@ -44,10 +46,10 @@ elif report_type == "home":
     print("开始居家打卡\n")
 
 try:
-    username = os.environ['USERNAME']
-    password = os.environ['PASSWORD']
-    mobile = os.environ['MOBILE']
-    homemobile = os.environ['HOMEMOBILE']
+    username = os.environ['USERNAME'] 
+    password = os.environ['PASSWORD'] 
+    mobile = os.environ['MOBILE'] 
+    homemobile = os.environ['HOMEMOBILE'] 
 except:
 
     username = load_dict.get("username", )
@@ -56,22 +58,25 @@ except:
     homemobile = load_dict.get("homemobile", )
 
 try:
-    gpslocation = os.environ['GPS']
-    lat = float(os.environ['LAT'])
-    lon = float(os.environ['LON'])
+    gpslocation = os.environ['GPS'] 
+    lat = float(os.environ['LAT']) 
+    lon = float(os.environ['LON']) 
 except:
     gpslocation = load_dict.get("gpslocation", )
     lat = float(load_dict.get("lat", ))
     lon = float(load_dict.get("lon", ))
 try:
     vaccine = os.environ['VACCINE']
+    #nucleicacidtest = os.environ['NUCLEICACIDTEST']
+    lasttest = os.environ['LASTTEST']
 
 except:
     vaccine = load_dict.get("vaccine", )
-
+    #nucleicacidtest = load_dict.get("nucleicacidtest", )
+    lasttest = load_dict.get("lasttest", )
 try:
-    novaccine_reason = os.environ['NOVACCINEREASON']
-    novaccine_detail = os.environ['NOVACCINEDETAIL']
+    novaccine_reason=os.environ['NOVACCINEREASON']
+    novaccine_detail=os.environ['NOVACCINEDETAIL']
 except:
     try:
         novaccine_reason = load_dict.get("novaccine_reason", )
@@ -107,13 +112,13 @@ except:
     my_sender = load_dict.get("my_sender", )
     SMTPdomain = load_dict.get("SMTPdomain", )
     SMTPauth = load_dict.get("SMTPauth", )
-# history_url = encode(username)
-
-nucleicacidtest = ""
+history_url = encode(username)
+# print(history_url)
+nucleicacidtest=""
 run = 0
 
 data = [mobile, homemobile, gpslocation, lat, lon, region, area, build, dorm, schoolgps, schoollat, schoollon, vaccine,
-        nucleicacidtest, novaccine_reason, novaccine_detail]
+        nucleicacidtest, lasttest,novaccine_reason,novaccine_detail]
 try:
     run = service(username, password, datetime, report_type, data)
 except:
@@ -128,10 +133,10 @@ else:
 
 if notice_type == 1:
     if report_status == 1:
-        mail(username, "成功", my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
+        mail(username, "成功", history_url, my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
         print("打卡成功，已发送邮件")
     else:
-        mail(username, "失败", my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
+        mail(username, "失败", history_url, my_user, my_sender, SMTPdomain, SMTPauth, datetime, report_type)
         print("打卡失败，已发送邮件")
 else:
     print("未开启通知")
